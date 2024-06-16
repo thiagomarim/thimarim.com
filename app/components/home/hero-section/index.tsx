@@ -4,10 +4,8 @@ import { TbBrandGithub, TbBrandLinkedin } from "react-icons/tb";
 
 export default function HeroSection() {
   return (
-    <section className="flex flex-col items-center text-center gap-4">
-      <h1 className="text-4xl sm:text-5xl font-bold mt-32 sm:mt-[242px]">
-        Thiago Marim
-      </h1>
+    <section className="flex flex-col items-center text-center gap-4 mb-[120px] lg:mb-[390px] mt-[150px] sm:mt-[323px]">
+      <h1 className="text-4xl sm:text-5xl font-bold">Thiago Marim</h1>
       <p className="text-zinc-400 max-w-[527px] text-lg">
         Desenvolvedor front-end totalmente apaixonado pelo o que faz, atualmente
         localizado em São Paulo, Brasil.
