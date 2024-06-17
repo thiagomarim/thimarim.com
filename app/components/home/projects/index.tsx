@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import CardProjects from "../../card-projects";
+import ProjectCard from "../../project-card";
 
 export default function Projects() {
   return (
     <section>
-      <div className="flex items-center justify-between mb-10 flex-wrap">
+      <div className="flex items-center justify-between mb-16 flex-wrap">
         <div>
           <h2 className="text-2xl font-semibold">Projetos em Destaques</h2>
           <p className="text-zinc-400 leading-8">
@@ -23,8 +23,8 @@ export default function Projects() {
         </Link>
       </div>
       <div className="flex flex-col gap-10">
-        <CardProjects />
-        <CardProjects />
+        <ProjectCard />
+        <ProjectCard />
       </div>
     </section>
   );

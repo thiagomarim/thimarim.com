@@ -2,7 +2,7 @@ import Image from "next/image";
 import Button from "../ui/button";
 import { HiArrowNarrowRight } from "react-icons/hi";
 
-export default function CardProjects() {
+export default function ProjectCard() {
   return (
     <div className="flex flex-col justify-between lg:flex-row gap-6 sm:gap-12 group">
       <Image
