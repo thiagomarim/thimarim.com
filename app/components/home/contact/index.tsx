@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section>
+    <section id="contact">
       <h1 className="text-2xl font-semibold">Entre em Contato!</h1>
       <p className="text-zinc-400 leading-8 mt-3">
         Você pode ver mais sobre o meu trabalho no meu{" "}

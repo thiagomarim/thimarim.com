@@ -10,7 +10,7 @@ export const NAV_ITEMS = [
   },
   {
     label: "Projetos",
-    href: "/projetos",
+    href: "/all-projects",
   },
 ];
 

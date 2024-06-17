@@ -10,9 +10,9 @@ export default function HeroSection() {
         Desenvolvedor front-end totalmente apaixonado pelo o que faz, atualmente
         localizado em São Paulo, Brasil.
       </p>
-      <div className="flex items-center flex-wrap justify-center gap-6">
+      <div className="flex items-center flex-wrap justify-center gap-6 mt-2">
         <Button icon={<HiArrowNarrowRight size={20} />}>
-          Entrar em contato
+          <a href="#contact">Entrar em contato</a>
         </Button>
         <div className="flex items-center gap-4 text-zinc-700">
           <a
