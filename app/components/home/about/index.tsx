@@ -5,7 +5,7 @@ export default function AboutMe() {
     <section className="flex items-center gap-10 sm:gap-20 flex-wrap lg:flex-nowrap">
       <div className="flex flex-col gap-4">
         <h2 className="text-2xl font-semibold">Sobre mim</h2>
-        <p className="text-zinc-400">
+        <p className="text-zinc-400 leading-8">
           Olá eu me chamo Thiago Soares Marim, tenho 18 anos e sou desenvolvedor
           front-end. Atualmente estou cursando{" "}
           <span className="text-gray-50">
@@ -17,7 +17,7 @@ export default function AboutMe() {
           </span>
           .
         </p>
-        <p className="text-zinc-400">
+        <p className="text-zinc-400 leading-8">
           Minha paixão é criar e desenvolver websites com interfaces bonitas e
           chamativas, com foco na experiência do usuário. Para o desenvolvimento
           web, possuo conhecimento em <span className="text-gray-50">HTML</span>
