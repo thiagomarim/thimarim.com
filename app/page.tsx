@@ -1,11 +1,13 @@
 import AboutMe from "./components/home/about";
 import HeroSection from "./components/home/hero-section";
+import Projects from "./components/home/projects";
 
 export default function Home() {
   return (
     <main className="container flex flex-col gap-32 mb-32">
       <HeroSection />
       <AboutMe />
+      <Projects />
     </main>
   );
 }
