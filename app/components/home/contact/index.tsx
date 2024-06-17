@@ -8,7 +8,7 @@ export default function Contact() {
           href="https://www.linkedin.com/in/thiago-marim"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-100 underline underline-offset-4"
+          className="text-gray-50 underline underline-offset-4"
         >
           Linkedin
         </a>{" "}
@@ -17,7 +17,7 @@ export default function Contact() {
           href="https://github.com/thiagomarim"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-100 underline underline-offset-4"
+          className="text-gray-50 underline underline-offset-4"
         >
           Github
         </a>
@@ -26,7 +26,7 @@ export default function Contact() {
           href="mailto:thiago.marim2005@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-100 underline underline-offset-4"
+          className="text-gray-50 underline underline-offset-4"
         >
           E-mail
         </a>

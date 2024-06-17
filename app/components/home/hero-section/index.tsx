@@ -18,14 +18,14 @@ export default function HeroSection() {
           <a
             href=""
             target="_blank"
-            className="hover:text-gray-100 transition-colors"
+            className="hover:text-gray-50 transition-colors"
           >
             <TbBrandGithub size={24} />
           </a>
           <a
             href=""
             target="_blank"
-            className="hover:text-gray-100 transition-colors"
+            className="hover:text-gray-50 transition-colors"
           >
             <TbBrandLinkedin size={24} />
           </a>

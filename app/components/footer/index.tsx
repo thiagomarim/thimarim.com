@@ -7,7 +7,7 @@ export default function Footer() {
           href="https://github.com/thiagomarim"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-zinc-400 hover:text-gray-100 transition-colors"
+          className="text-zinc-400 hover:text-gray-50 transition-colors"
         >
           github
         </a>
@@ -15,7 +15,7 @@ export default function Footer() {
           href="https://www.linkedin.com/in/thiago-marim"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-zinc-400 hover:text-gray-100 transition-colors"
+          className="text-zinc-400 hover:text-gray-50 transition-colors"
         >
           linkedin
         </a>
@@ -23,7 +23,7 @@ export default function Footer() {
           href="mailto:thiago.marim2005@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-zinc-400 hover:text-gray-100 transition-colors"
+          className="text-zinc-400 hover:text-gray-50 transition-colors"
         >
           email
         </a>
