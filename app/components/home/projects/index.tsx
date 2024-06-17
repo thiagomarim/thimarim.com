@@ -5,10 +5,10 @@ import ProjectCard from "../../project-card";
 export default function Projects() {
   return (
     <section>
-      <div className="flex items-center justify-between mb-16 flex-wrap">
+      <div className="flex items-end justify-between mb-16 flex-wrap">
         <div>
           <h2 className="text-2xl font-semibold">Projetos em Destaques</h2>
-          <p className="text-zinc-400 leading-8">
+          <p className="text-zinc-400 leading-8 mt-3">
             Aqui estão os melhores projetos que eu já desenvolvi. Fique à
             vontade para explorar!
           </p>
@@ -17,7 +17,7 @@ export default function Projects() {
           href="/all-projects"
           className="mb-6 sm:mb-0 order-first sm:order-none"
         >
-          <span className="flex items-center gap-2 hover:underline hover:underline-offset-4">
+          <span className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-sm">
             Ver todos <HiArrowNarrowRight size={20} />
           </span>
         </Link>

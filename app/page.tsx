@@ -1,4 +1,5 @@
 import AboutMe from "./components/home/about";
+import Contact from "./components/home/contact";
 import HeroSection from "./components/home/hero-section";
 import Projects from "./components/home/projects";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <AboutMe />
       <Projects />
+      <Contact />
     </main>
   );
 }
