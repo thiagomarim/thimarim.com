@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Button from "../ui/button";
-import { HiArrowNarrowRight } from "react-icons/hi";
+import { MdArrowOutward } from "react-icons/md";
+import { TbBrandGithub } from "react-icons/tb";
 
 export default function ProjectCard() {
   return (
@@ -27,10 +28,10 @@ export default function ProjectCard() {
         </div>
         <div className="flex items-center gap-6">
           <Button secondary>
-            Ver Código <HiArrowNarrowRight size={20} />
+            Visitar <MdArrowOutward size={18} />
           </Button>
           <Button secondary>
-            Ver Código <HiArrowNarrowRight size={20} />
+            Código-fonte <TbBrandGithub size={18} />
           </Button>
         </div>
       </div>

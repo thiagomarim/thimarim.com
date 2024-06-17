@@ -18,11 +18,11 @@ export default function Projects() {
           className="mb-6 sm:mb-0 order-first sm:order-none"
         >
           <span className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-sm">
-            Ver todos <HiArrowNarrowRight size={20} />
+            Ver todos <HiArrowNarrowRight size={18} />
           </span>
         </Link>
       </div>
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-16">
         <ProjectCard />
         <ProjectCard />
       </div>
