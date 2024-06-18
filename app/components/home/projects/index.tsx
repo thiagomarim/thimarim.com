@@ -28,6 +28,13 @@ export default function Projects() {
           <ProjectCard project={project} key={project.name} />
         ))}
       </div>
+      <div className="w-max mt-8 sm:mt-16">
+        <Link href="/all-projects">
+          <span className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-sm">
+            Ver todos <HiArrowNarrowRight size={18} />
+          </span>
+        </Link>
+      </div>
     </section>
   );
 }
