@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="container flex items-center justify-between m-6 ">
+    <footer className="container flex items-center justify-between mt-16 sm:mt-32 mb-6">
       <span className="text-zinc-400">©2024 Thiago Soares Marim</span>
       <div className="flex items-center gap-6">
         <a
