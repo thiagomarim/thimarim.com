@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { HiArrowNarrowLeft } from "react-icons/hi";
 import AllProjectsCard from "../components/all-projects-card";
+import { ProjectsList } from "../data/projects";
 
 export default function AllProjects() {
   return (
@@ -22,10 +23,9 @@ export default function AllProjects() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(350px,1fr))] mt-12 gap-6">
-          <AllProjectsCard />
-          <AllProjectsCard />
-          <AllProjectsCard />
-          <AllProjectsCard />
+          {ProjectsList.map((project) => (
+            <AllProjectsCard key={project.name} project={project} />
+          ))}
         </div>
       </section>
     </main>

@@ -1,13 +1,9 @@
 import Link from "next/link";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import ProjectCard from "../../project-card";
-import { ProjectsListProps } from "@/app/data/projects";
+import { ProjectsList } from "@/app/data/projects";
 
-interface ProjectProps {
-  projects: ProjectsListProps[];
-}
-
-export default function Projects({ projects }: ProjectProps) {
+export default function Projects() {
   return (
     <section>
       <div className="flex items-end justify-between mb-16 flex-wrap">
@@ -28,7 +24,7 @@ export default function Projects({ projects }: ProjectProps) {
         </Link>
       </div>
       <div className="flex flex-col gap-16">
-        {projects.slice(0, 2).map((project) => (
+        {ProjectsList.slice(0, 2).map((project) => (
           <ProjectCard project={project} key={project.name} />
         ))}
       </div>
