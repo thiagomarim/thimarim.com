@@ -19,7 +19,7 @@ export const ProjectsList: ProjectsListProps[] = [
   {
     name: "Fintech",
     desc: "O projeto é uma dashboard que contém diversas informações das vendas de sua empresa, contendo um resumo com o total de vendas feita durante uma data selecionada, um gráfico comparando as vendas anteriores, e por fim uma lista com informações de todos os pagamentos.",
-    img: "/projects/dogs.jpg",
+    img: "/projects/fintech.jpg",
     techs: ["React", "Victory", "TypeScript", "React Router"],
     repo: "https://github.com/thiagomarim/fintech",
     live: "https://fintech-snowy.vercel.app/",
@@ -27,7 +27,7 @@ export const ProjectsList: ProjectsListProps[] = [
   {
     name: "InteriorDecor",
     desc: "Uma landing page de uma empresa fictícia voltada para designers de interiores, contendo todas informações da empresa, alguns exemplos de interiores feitos e muito mais!",
-    img: "/projects/dogs.jpg",
+    img: "/projects/interior-decor.jpg",
     techs: ["React", "Tailwind CSS"],
     repo: "https://github.com/thiagomarim/interior-decor",
     live: "https://interior-decor-six.vercel.app/",

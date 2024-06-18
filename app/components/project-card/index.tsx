@@ -13,14 +13,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     <div className="flex flex-col items-center justify-between lg:flex-row gap-6 sm:gap-12 group">
       <Image
         src={project.img}
-        alt=""
+        alt={`Imagem do projeto ${project.name}`}
         width={559}
         height={354}
         unoptimized
         className="w-full h-[232px] sm:h-[354px] lg:w-[559px] lg:min-h-full object-cover rounded-lg group-even:order-none lg:group-even:order-last"
       />
       <div className="flex flex-col gap-4 sm:gap-6 items-start lg:items-center text-start lg:text-center max-w-full lg:max-w-[531px]">
-        <h3 className="text-lg font-medium">{project.name}</h3>
+        <h3 className="text-xl font-medium">{project.name}</h3>
         <p className="text-zinc-400 leading-8">{project.desc}</p>
         <div className="flex items-center gap-2">
           {project.techs.map((tech) => (

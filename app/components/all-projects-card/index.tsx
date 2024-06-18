@@ -14,7 +14,7 @@ export default function AllProjectsCard({ project }: AllProjectsCardProps) {
       <div className="px-4 py-3 flex flex-col gap-4" key={project.name}>
         <Image
           src={project.img}
-          alt=""
+          alt={`Imagem do projeto ${project.name}`}
           unoptimized
           width={340}
           height={174}
