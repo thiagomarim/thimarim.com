@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import ProjectCard from "../../project-card";
+import ProjectCard from "./project-card";
 import { ProjectsList } from "@/app/data/projects";
 
-export default function Projects() {
+export default function FeaturedProjects() {
   return (
     <section>
       <div className="flex items-end justify-between mb-16 flex-wrap">

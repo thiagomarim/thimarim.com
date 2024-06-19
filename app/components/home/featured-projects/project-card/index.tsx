@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "../ui/button";
+import Button from "../../../ui/button";
 import { MdArrowOutward } from "react-icons/md";
 import { TbBrandGithub } from "react-icons/tb";
 import { ProjectsListProps } from "@/app/data/projects";
