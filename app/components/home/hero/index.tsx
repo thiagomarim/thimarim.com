@@ -11,8 +11,10 @@ export default function HeroSection() {
         localizado em São Paulo, Brasil.
       </p>
       <div className="flex items-center flex-wrap justify-center gap-6 mt-2">
-        <Button icon={<HiArrowNarrowRight size={20} />}>
-          <a href="#contact">Entrar em contato</a>
+        <Button>
+          <a href="#contact" className="flex items-center gap-2">
+            Entrar em contato <HiArrowNarrowRight size={20} />
+          </a>
         </Button>
         <div className="flex items-center gap-4 text-zinc-700">
           <a

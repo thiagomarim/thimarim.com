@@ -4,6 +4,7 @@ import { z } from "zod";
 import Button from "../../ui/button";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { HiArrowNarrowRight } from "react-icons/hi";
 
 const contactFormSchema = z.object({
   name: z
@@ -70,7 +71,10 @@ export default function ContactForm() {
       {errors.message && (
         <span className="text-red-500">{errors.message.message}</span>
       )}
-      <Button type="submit">Enviar Mensagem</Button>
+      <Button className="p-4 justify-center" type="submit">
+        Enviar Mensagem
+        <HiArrowNarrowRight size={20} />
+      </Button>
     </form>
   );
 }
