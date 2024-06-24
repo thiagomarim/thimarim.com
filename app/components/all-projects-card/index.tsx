@@ -26,7 +26,7 @@ export default function AllProjectsCard({ project }: AllProjectsCardProps) {
             {project.desc}
           </p>
 
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             {project.techs.map((tech) => (
               <div
                 key={tech}
