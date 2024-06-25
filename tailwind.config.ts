@@ -15,6 +15,7 @@ const config: Config = {
       buttonText: "#08090A",
       buttonSecondary: "#232323",
       ButtonSecondaryText: "#fff",
+      border: "#1C1C1D",
     },
   },
   plugins: [],
