@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "../../../ui/button";
+import { Badge } from "../../../ui/badge";
 import { MdArrowOutward } from "react-icons/md";
 import { TbBrandGithub } from "react-icons/tb";
 import { ProjectsListProps } from "@/app/data/projects";
@@ -24,12 +25,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <p className="text-paragraph leading-8">{project.desc}</p>
         <div className="flex items-center gap-2">
           {project.techs.map((tech) => (
-            <div
-              key={tech}
-              className="px-2 py-[2px] rounded-lg bg-[#2F2F2F] flex items-center"
-            >
-              <span className="text-sm text-title">{tech}</span>
-            </div>
+            <Badge key={tech}>{tech}</Badge>
           ))}
         </div>
         <div className="flex items-center gap-6">

@@ -15,10 +15,7 @@ export default function AllProjects() {
             </span>
           </Link>
           <div>
-            <SectionTitle
-              title="Todos projetos"
-              subtitle="Aqui estão todos os projetos que eu desenvolvi, fique à vontade para explora-los!"
-            />
+            <SectionTitle title="Todos projetos" />
           </div>
         </div>
 

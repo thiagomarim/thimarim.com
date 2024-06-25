@@ -3,6 +3,7 @@ import { Button } from "../ui/button";
 import { MdArrowOutward } from "react-icons/md";
 import { TbBrandGithub } from "react-icons/tb";
 import { ProjectsListProps } from "@/app/data/projects";
+import { Badge } from "../ui/badge";
 
 interface AllProjectsCardProps {
   project: ProjectsListProps;
@@ -28,12 +29,9 @@ export default function AllProjectsCard({ project }: AllProjectsCardProps) {
 
           <div className="flex flex-wrap items-center gap-2">
             {project.techs.map((tech) => (
-              <div
-                key={tech}
-                className="px-2 py-[2px] rounded-lg bg-[#2F2F2F] flex items-center"
-              >
-                <span className="text-xs text-title">{tech}</span>
-              </div>
+              <Badge key={tech} size="small">
+                {tech}
+              </Badge>
             ))}
           </div>
 
