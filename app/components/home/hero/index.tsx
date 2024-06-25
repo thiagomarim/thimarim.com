@@ -1,36 +1,39 @@
-import { HiArrowNarrowRight } from "react-icons/hi";
 import { Button } from "../../ui/button";
 import { TbBrandGithub, TbBrandLinkedin } from "react-icons/tb";
 
 export default function HeroSection() {
   return (
-    <section className="flex flex-col items-center text-center gap-4 mb-[120px] lg:mb-[390px] mt-[150px] sm:mt-[323px]">
-      <h1 className="text-4xl sm:text-5xl font-bold">Thiago Marim</h1>
-      <p className="text-zinc-400 max-w-[527px] text-lg">
-        Desenvolvedor front-end totalmente apaixonado pelo o que faz, atualmente
-        localizado em São Paulo, Brasil.
-      </p>
-      <div className="flex items-center flex-wrap justify-center gap-6 mt-2">
-        <Button>
-          <a href="#contact" className="flex items-center gap-2">
-            Entrar em contato <HiArrowNarrowRight size={20} />
-          </a>
-        </Button>
-        <div className="flex items-center gap-4 text-zinc-700">
-          <a
-            href=""
-            target="_blank"
-            className="hover:text-gray-50 transition-colors"
-          >
-            <TbBrandGithub size={24} />
-          </a>
-          <a
-            href=""
-            target="_blank"
-            className="hover:text-gray-50 transition-colors"
-          >
-            <TbBrandLinkedin size={24} />
-          </a>
+    <section className="w-full bg-intro-bg bg-no-repeat bg-left-top">
+      <div className="container flex flex-col gap-4 mb-[120px] lg:mb-[390px] mt-[150px] sm:mt-[323px]">
+        <h1 className="text-4xl sm:text-[56px] leading-[61px] font-semibold">
+          Desenvolvedor Front-end
+        </h1>
+        <p className="text-paragraph max-w-[572px] text-xl ">
+          Olá, me chamo Thiago Marim tenho 18 anos e atualmente estou localizado
+          em São Paulo, Brasil.
+        </p>
+        <div className="flex flex-wrap gap-6 mt-2">
+          <Button>
+            <a href="#contact" className="flex items-center gap-2">
+              Entrar em contato
+            </a>
+          </Button>
+          <div className="flex items-center gap-4 text-zinc-700">
+            <a
+              href=""
+              target="_blank"
+              className="hover:text-gray-50 transition-colors"
+            >
+              <TbBrandGithub size={24} />
+            </a>
+            <a
+              href=""
+              target="_blank"
+              className="hover:text-gray-50 transition-colors"
+            >
+              <TbBrandLinkedin size={24} />
+            </a>
+          </div>
         </div>
       </div>
     </section>

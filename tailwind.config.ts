@@ -11,12 +11,15 @@ const config: Config = {
       colors: {
         title: "#fff",
         subTitle: "#E3E4E6",
-        text: "#969799",
+        paragraph: "#969799",
         button: "#E6E6E6",
         buttonText: "#08090A",
         buttonSecondary: "#232323",
         ButtonSecondaryText: "#fff",
         border: "#1C1C1D",
+      },
+      backgroundImage: {
+        "intro-bg": "url('/intro/intro-bg.png')",
       },
     },
   },
