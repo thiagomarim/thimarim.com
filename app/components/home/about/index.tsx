@@ -3,7 +3,7 @@ import { SectionTitle } from "../../section-title";
 
 export default function AboutMe() {
   return (
-    <section className="container flex items-center gap-10 sm:gap-20 flex-wrap lg:flex-nowrap">
+    <section className="container flex items-center gap-10 sm:gap-20 flex-wrap lg:flex-nowrap mb-40">
       <div className="flex flex-col gap-4">
         <SectionTitle title="Sobre mim" subtitle="Um pouco mais sobre mim" />
         <p className="text-paragraph leading-8">

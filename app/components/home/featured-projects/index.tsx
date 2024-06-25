@@ -2,17 +2,17 @@ import Link from "next/link";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import ProjectCard from "./project-card";
 import { ProjectsList } from "@/app/data/projects";
+import { SectionTitle } from "../../section-title";
 
 export default function FeaturedProjects() {
   return (
-    <section>
+    <section className="container my-40">
       <div className="flex items-end justify-between mb-16 flex-wrap">
         <div>
-          <h2 className="text-2xl font-semibold">Projetos em Destaques</h2>
-          <p className="text-zinc-400 leading-8 mt-3">
-            Aqui estão os melhores projetos que eu já desenvolvi. Fique à
-            vontade para explorar!
-          </p>
+          <SectionTitle
+            title="Projetos em Destaques"
+            subtitle="Aqui estão os melhores projetos que eu já desenvolvi"
+          />
         </div>
         <Link
           href="/all-projects"
