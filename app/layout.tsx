@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+});
 
 export const metadata: Metadata = {
   title: "Thiago Marim",
@@ -18,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="antialiased">
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <Header />
         {children}
         <Footer />
