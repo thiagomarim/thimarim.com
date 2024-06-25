@@ -1,40 +1,57 @@
-// import ContactForm from "./contact-form";
+import { MdOutlineEmail } from "react-icons/md";
+import { SectionTitle } from "../../section-title";
+import { Button } from "../../ui/button";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+const INFO_CONTACT = [
+  {
+    title: "E-mail",
+    subtitle: "Fique à vontade para me mandar um e-mail.",
+    icon: <MdOutlineEmail size={20} />,
+    href: "mailto:thiago.marim2005@gmail.com",
+    buttonText: "Enviar",
+  },
+  {
+    title: "Linkedin",
+    subtitle: "Venha saber mais sobre mim.",
+    icon: <FaLinkedin size={20} />,
+    href: "https://www.linkedin.com/in/thiago-marim/",
+    buttonText: "Visitar",
+  },
+  {
+    title: "Github",
+    subtitle: "Venha ver todos os meus projetos.",
+    icon: <FaGithub size={20} />,
+    href: "https://github.com/thiagomarim",
+    buttonText: "Visitar",
+  },
+];
 
 export default function Contact() {
   return (
-    <section id="contact">
-      <h1 className="text-2xl font-semibold">Entre em Contato!</h1>
-      <p className="text-zinc-400 leading-8 mt-3">
-        Você pode ver mais sobre o meu trabalho no meu{" "}
-        <a
-          href="https://www.linkedin.com/in/thiago-marim"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-50 underline underline-offset-4"
-        >
-          Linkedin
-        </a>{" "}
-        ou meus códigos no{" "}
-        <a
-          href="https://github.com/thiagomarim"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-50 underline underline-offset-4"
-        >
-          Github
-        </a>
-        . Fique à vontade para me mandar uma mensagem pelo meu{" "}
-        <a
-          href="mailto:thiago.marim2005@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-50 underline underline-offset-4"
-        >
-          E-mail
-        </a>
-        .
-      </p>
-      {/* <ContactForm /> */}
+    <section id="contact" className="container">
+      <SectionTitle
+        title="Entre em Contato"
+        subtitle="Não seja tímido, entre em contato"
+      />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-6 mt-12">
+        {INFO_CONTACT.map((info) => (
+          <div className="flex flex-col gap-2" key={info.title}>
+            <div className="flex flex-col gap-1">
+              <h3 className="text-lg font-medium flex items-center gap-2">
+                {info.icon}
+                {info.title}
+              </h3>
+              <span className="text-paragraph">{info.subtitle}</span>
+            </div>
+            <Button variant={"secondary"} size={"sm"} className="w-max">
+              <a href={info.href} target="_blank" rel="noopener noreferrer">
+                {info.buttonText}
+              </a>
+            </Button>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
