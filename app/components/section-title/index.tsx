@@ -1,0 +1,15 @@
+interface SectionTitleProps {
+  title: string;
+  subtitle: string;
+}
+
+export function SectionTitle({ title, subtitle }: SectionTitleProps) {
+  return (
+    <div className="flex flex-col gap-4">
+      <span className="flex text-[#e3e4e6] items-center gap-2 text-sm font-medium tracking-[-0.18px] before:block before:content-[''] before:w-[14px] before:h-2 before:rounded-full before:bg-emerald-500">
+        {subtitle}
+      </span>
+      <h2 className="text-4xl font-medium tracking-[-0.47px]">{title}</h2>
+    </div>
+  );
+}

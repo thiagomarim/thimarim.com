@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { SectionTitle } from "../../section-title";
 
 export default function AboutMe() {
   return (
-    <section className="flex items-center gap-10 sm:gap-20 flex-wrap lg:flex-nowrap">
+    <section className="container flex items-center gap-10 sm:gap-20 flex-wrap lg:flex-nowrap">
       <div className="flex flex-col gap-4">
-        <h2 className="text-2xl font-semibold">Sobre mim</h2>
+        <SectionTitle title="Sobre mim" subtitle="Um pouco mais sobre mim" />
         <p className="text-zinc-400 leading-8">
           Olá eu me chamo Thiago Soares Marim, tenho 18 anos e sou desenvolvedor
           front-end. Atualmente estou cursando{" "}
