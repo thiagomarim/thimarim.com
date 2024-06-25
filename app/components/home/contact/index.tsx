@@ -1,5 +1,5 @@
 import { MdOutlineEmail } from "react-icons/md";
-import { SectionTitle } from "../../section-title";
+import { SectionTitle } from "../../ui/section-title";
 import { Button } from "../../ui/button";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 

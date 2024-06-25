@@ -21,19 +21,19 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       />
       <div className="flex flex-col gap-4 sm:gap-6 items-start lg:items-center text-start lg:text-center max-w-full lg:max-w-[531px]">
         <h3 className="text-xl font-medium">{project.name}</h3>
-        <p className="text-zinc-400 leading-8">{project.desc}</p>
+        <p className="text-paragraph leading-8">{project.desc}</p>
         <div className="flex items-center gap-2">
           {project.techs.map((tech) => (
             <div
               key={tech}
-              className="px-2 py-[2px] rounded-full flex items-center"
+              className="px-2 py-[2px] rounded-lg bg-[#2F2F2F] flex items-center"
             >
               <span className="text-sm text-title">{tech}</span>
             </div>
           ))}
         </div>
         <div className="flex items-center gap-6">
-          <Button variant={"secondary"} size={"sm"}>
+          <Button variant={"link"}>
             <a
               href={project.live}
               className="flex items-center gap-2"
@@ -43,7 +43,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               Visitar <MdArrowOutward size={18} />
             </a>
           </Button>
-          <Button size={"sm"}>
+          <Button variant={"link"}>
             <a
               href={project.repo}
               className="flex items-center gap-2"

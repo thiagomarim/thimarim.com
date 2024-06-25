@@ -2,7 +2,7 @@ import Link from "next/link";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import ProjectCard from "./project-card";
 import { ProjectsList } from "@/app/data/projects";
-import { SectionTitle } from "../../section-title";
+import { SectionTitle } from "../../ui/section-title";
 
 export default function FeaturedProjects() {
   return (

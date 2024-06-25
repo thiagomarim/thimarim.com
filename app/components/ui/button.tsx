@@ -12,10 +12,11 @@ const buttonVariants = cva(
         default: "bg-button text-buttonText hover:bg-[#fff] font-semibold",
         secondary:
           "bg-buttonSecondary text-buttonSecondaryText hover:bg-[#2F2F2F] font-semibold",
+        link: "bg-transparent underline-offset-4 hover:underline text-title hover:text-[#CDCDCE] hover:bg-transparent",
       },
       size: {
-        default: "h-10 px-4 text-[15px] font-medium",
         sm: "h-8 px-3 rounded-lg text-[13px]",
+        default: "h-10 px-4 text-[15px] font-medium",
       },
     },
     defaultVariants: {

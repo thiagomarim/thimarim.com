@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { SectionTitle } from "../../section-title";
+import { SectionTitle } from "../../ui/section-title";
 
 export default function AboutMe() {
   return (
