@@ -1,11 +1,11 @@
 import { Button } from "../../ui/button";
 import { TbBrandGithub, TbBrandLinkedin } from "react-icons/tb";
 
-export default function HeroSection() {
+export default function Intro() {
   return (
     <section className="w-full bg-intro-bg bg-no-repeat bg-left-top">
       <div className="container flex flex-col gap-4 mb-[120px] lg:mb-[390px] mt-[150px] sm:mt-[323px]">
-        <h1 className="text-4xl sm:text-[56px] leading-[61px] font-medium">
+        <h1 className="text-5xl sm:text-[56px]  leading-none sm:leading-[61px] font-medium">
           Desenvolvedor Front-end
         </h1>
         <p className="text-paragraph max-w-[572px] text-xl ">
