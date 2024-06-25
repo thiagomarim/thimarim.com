@@ -6,8 +6,8 @@ export default function AboutMe() {
     <section className="container flex items-center gap-10 sm:gap-20 flex-wrap lg:flex-nowrap">
       <div className="flex flex-col gap-4">
         <SectionTitle title="Sobre mim" subtitle="Um pouco mais sobre mim" />
-        <p className="text-zinc-400 leading-8">
-          Olá eu me chamo Thiago Soares Marim, tenho 18 anos e sou desenvolvedor
+        <p className="text-paragraph leading-8">
+          Olá eu me chamo Thiago Soares Marim, tenho 19 anos e sou desenvolvedor
           front-end. Atualmente estou cursando{" "}
           <span className="text-gray-50">
             Análise e Desenvolvimento de Sistemas
@@ -33,9 +33,9 @@ export default function AboutMe() {
         </p>
       </div>
       <Image
-        src="/about/perfil.png"
-        width={420}
-        height={420}
+        src="/about/about.svg"
+        width={393}
+        height={300}
         alt="Foto de perfil do Thiago Marim"
         className="rounded-lg"
       />
