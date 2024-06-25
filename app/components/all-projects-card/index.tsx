@@ -10,7 +10,7 @@ interface AllProjectsCardProps {
 
 export default function AllProjectsCard({ project }: AllProjectsCardProps) {
   return (
-    <div className="bg-zinc-950 border border-zinc-900 rounded-lg">
+    <div className="bg-background border border-border rounded-lg">
       <div className="px-4 py-3 flex flex-col gap-4" key={project.name}>
         <Image
           src={project.img}
@@ -30,15 +30,15 @@ export default function AllProjectsCard({ project }: AllProjectsCardProps) {
             {project.techs.map((tech) => (
               <div
                 key={tech}
-                className="px-2 py-[2px] bg-emerald-950 rounded-full flex items-center border border-emerald-400"
+                className="px-2 py-[2px] rounded-lg bg-[#2F2F2F] flex items-center"
               >
-                <span className="text-xs text-emerald-400">{tech}</span>
+                <span className="text-xs text-title">{tech}</span>
               </div>
             ))}
           </div>
 
           <div className="flex items-center gap-6 mt-2">
-            <Button>
+            <Button variant={"link"} size={"sm"}>
               <a
                 href={project.live}
                 className="flex items-center gap-2"
@@ -48,7 +48,7 @@ export default function AllProjectsCard({ project }: AllProjectsCardProps) {
                 Visitar <MdArrowOutward size={18} />
               </a>
             </Button>
-            <Button>
+            <Button variant={"link"} size={"sm"}>
               <a
                 href={project.repo}
                 className="flex items-center gap-2"

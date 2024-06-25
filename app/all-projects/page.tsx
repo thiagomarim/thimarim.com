@@ -2,11 +2,12 @@ import Link from "next/link";
 import { HiArrowNarrowLeft } from "react-icons/hi";
 import AllProjectsCard from "../components/all-projects-card";
 import { ProjectsList } from "../data/projects";
+import { SectionTitle } from "../components/ui/section-title";
 
 export default function AllProjects() {
   return (
     <main className="container mb-16 sm:mb-32">
-      <section className="mt-16">
+      <section className="mt-40">
         <div className="flex flex-col gap-6">
           <Link href="/" className="w-min">
             <span className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-sm">
@@ -14,11 +15,10 @@ export default function AllProjects() {
             </span>
           </Link>
           <div>
-            <h2 className="text-2xl font-semibold">Todos projetos</h2>
-            <p className="text-zinc-400 leading-8 mt-3">
-              Aqui estão todos os projetos que eu desenvolvi, fique à vontade
-              para explora-los!
-            </p>
+            <SectionTitle
+              title="Todos projetos"
+              subtitle="Aqui estão todos os projetos que eu desenvolvi, fique à vontade para explora-los!"
+            />
           </div>
         </div>
 
