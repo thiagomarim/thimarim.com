@@ -1,27 +1,59 @@
-import { ButtonHTMLAttributes } from "react";
-import { twMerge } from "tailwind-merge";
+import * as React from "react";
+import Link from "next/link";
+import { VariantProps, cva } from "class-variance-authority";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  secondary?: boolean;
+import { cn } from "@/app/lib/utils";
+
+const buttonVariants = cva(
+  "inline-flex items-center justify-center rounded-[10px] text-sm font-medium transition-colors disabled:opacity-50 disabled:pointer-events-none",
+  {
+    variants: {
+      variant: {
+        default: "bg-button text-buttonText hover:bg-[#fff] font-semibold",
+        secondary:
+          "bg-buttonSecondary text-buttonSecondaryText hover:bg-[#2F2F2F] font-semibold",
+      },
+      size: {
+        default: "h-10 px-4 text-[15px] font-medium",
+        sm: "h-8 px-3 rounded-lg text-[13px]",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+);
+
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  href?: string;
 }
 
-export default function Button({
-  secondary,
-  children,
-  className,
-  ...props
-}: ButtonProps) {
-  return (
-    <button
-      className={twMerge(
-        "px-4 py-2 text-emerald-400 bg-emerald-950 hover:bg-emerald-800 border border-emerald-400 transition-colors rounded-lg text-base font-medium flex items-center gap-2",
-        className,
-        secondary &&
-          "bg-opacity-0 text-sm hover:bg-opacity-0 hover:underline hover:underline-offset-4 p-0 text-gray-50 border-none"
-      )}
-      {...props}
-    >
-      {children}
-    </button>
-  );
-}
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, children, href, variant, size, ...props }, ref) => {
+    if (href) {
+      return (
+        <Link
+          href={href}
+          className={cn(buttonVariants({ variant, size, className }))}
+        >
+          {children}
+        </Link>
+      );
+    }
+    return (
+      <button
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      >
+        {children}
+      </button>
+    );
+  }
+);
+Button.displayName = "Button";
+
+export { Button, buttonVariants };

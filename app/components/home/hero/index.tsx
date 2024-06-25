@@ -1,5 +1,5 @@
 import { HiArrowNarrowRight } from "react-icons/hi";
-import Button from "../../ui/button";
+import { Button } from "../../ui/button";
 import { TbBrandGithub, TbBrandLinkedin } from "react-icons/tb";
 
 export default function HeroSection() {

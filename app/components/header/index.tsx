@@ -3,6 +3,7 @@
 import Link from "next/link";
 import NavItem from "./nav-items";
 import Image from "next/image";
+import { Button } from "../ui/button";
 
 export const NAV_ITEMS = [
   {
@@ -26,6 +27,11 @@ export default function Header() {
           {NAV_ITEMS.map((item) => (
             <NavItem key={item.label} {...item} />
           ))}
+          <Link href={"#contato"}>
+            <Button variant={"default"} size={"sm"}>
+              Contato
+            </Button>
+          </Link>
         </nav>
       </div>
     </header>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Button from "../../../ui/button";
+import { Button } from "../../../ui/button";
 import { MdArrowOutward } from "react-icons/md";
 import { TbBrandGithub } from "react-icons/tb";
 import { ProjectsListProps } from "@/app/data/projects";
@@ -33,7 +33,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
         <div className="flex items-center gap-6">
-          <Button secondary>
+          <Button>
             <a
               href={project.live}
               className="flex items-center gap-2"
@@ -43,7 +43,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               Visitar <MdArrowOutward size={18} />
             </a>
           </Button>
-          <Button secondary>
+          <Button>
             <a
               href={project.repo}
               className="flex items-center gap-2"
