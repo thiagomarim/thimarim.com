@@ -8,6 +8,16 @@
   }
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 10rem);
+}
+
+.AppBody {
+  flex: 1;
+}
+
 .container {
   @apply mx-auto w-full max-w-[1200px] px-6;
 }

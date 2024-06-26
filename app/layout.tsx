@@ -22,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className="antialiased !scroll-smooth">
       <body className={roboto.className}>
-        <Header />
-        {children}
-        <Footer />
+        <div className="App">
+          <Header />
+          <main className="AppBody">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
