@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { Button } from "../../../ui/button";
-import { Badge } from "../../../ui/badge";
 import { MdArrowOutward } from "react-icons/md";
 import { TbBrandGithub } from "react-icons/tb";
 import { ProjectsListProps } from "@/app/data/projects";
+import { Badge } from "@/app/components/ui/badge";
+import { Button } from "@/app/components/ui/button";
 
 interface ProjectCardProps {
   project: ProjectsListProps;

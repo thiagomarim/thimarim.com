@@ -1,5 +1,5 @@
+import { SectionTitle } from "@/app/components/ui/section-title";
 import Image from "next/image";
-import { SectionTitle } from "../../ui/section-title";
 
 export default function AboutMe() {
   return (

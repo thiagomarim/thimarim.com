@@ -1,7 +1,7 @@
 import { MdOutlineEmail } from "react-icons/md";
-import { SectionTitle } from "../../ui/section-title";
-import { Button } from "../../ui/button";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SectionTitle } from "@/app/components/ui/section-title";
+import { Button } from "@/app/components/ui/button";
 
 const INFO_CONTACT = [
   {

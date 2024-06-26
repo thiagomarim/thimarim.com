@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { HiArrowNarrowLeft } from "react-icons/hi";
-import AllProjectsCard from "../components/all-projects-card";
 import { ProjectsList } from "../data/projects";
 import { SectionTitle } from "../components/ui/section-title";
+import AllProjectsCard from "../components/pages/all-projects/all-projects-card";
 
 export default function AllProjects() {
   return (
