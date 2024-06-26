@@ -1,13 +1,13 @@
 export default function Footer() {
   return (
-    <footer className="container flex items-center justify-between mt-16 sm:mt-32 mb-6">
-      <span className="text-zinc-400">©2024 Thiago Soares Marim</span>
+    <footer className="container flex flex-wrap gap-4 items-center justify-between mt-20 sm:mt-40 mb-6">
+      <span className="text-paragraph">©2024 Thiago Soares Marim</span>
       <div className="flex items-center gap-6">
         <a
           href="https://github.com/thiagomarim"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-zinc-400 hover:text-gray-50 transition-colors"
+          className="text-paragraph hover:text-gray-50 transition-colors"
         >
           github
         </a>
@@ -15,7 +15,7 @@ export default function Footer() {
           href="https://www.linkedin.com/in/thiago-marim"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-zinc-400 hover:text-gray-50 transition-colors"
+          className="text-paragraph hover:text-gray-50 transition-colors"
         >
           linkedin
         </a>
@@ -23,7 +23,7 @@ export default function Footer() {
           href="mailto:thiago.marim2005@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-zinc-400 hover:text-gray-50 transition-colors"
+          className="text-paragraph hover:text-gray-50 transition-colors"
         >
           email
         </a>
