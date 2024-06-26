@@ -1,6 +1,6 @@
 import AboutMe from "./components/home/about";
 import Contact from "./components/home/contact";
-import Intro from "./components/home/hero";
+import Intro from "./components/home/intro";
 import FeaturedProjects from "./components/home/featured-projects";
 
 export default function Home() {

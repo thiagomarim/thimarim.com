@@ -6,7 +6,7 @@ import { SectionTitle } from "../components/ui/section-title";
 
 export default function AllProjects() {
   return (
-    <main className="container mb-16 sm:mb-32">
+    <main className="container">
       <section className="mt-40">
         <div className="flex flex-col gap-6">
           <Link href="/" className="w-min">
