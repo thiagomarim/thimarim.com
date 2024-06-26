@@ -19,14 +19,18 @@ export const NAV_ITEMS = [
 export default function Header() {
   return (
     <header className="w-full flex items-center justify-center">
-      <div className="fixed top-0 flex items-center gap-6 sm:gap-[50px] mt-6 px-5 py-[14px] border border-border rounded-2xl w-max bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+      <div className="fixed top-0 flex items-center gap-6 sm:gap-[50px] mt-6 px-5 py-3 border border-border rounded-2xl w-max bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
         <Link href="/">
           <Image src="/logo.svg" alt="Logo Pessoal" width={101} height={24} />
         </Link>
         <nav className="flex items-center gap-6 sm:gap-[50px]">
-          {NAV_ITEMS.map((item) => (
-            <NavItem key={item.label} {...item} />
-          ))}
+          <ul className="flex items-center gap-6 sm:gap-[50px]">
+            {NAV_ITEMS.map((item) => (
+              <li key={item.label}>
+                <NavItem {...item} />
+              </li>
+            ))}
+          </ul>
           <Link href="#contact">
             <Button variant={"default"} size={"sm"}>
               Contato

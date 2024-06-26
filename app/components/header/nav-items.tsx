@@ -11,7 +11,7 @@ export default function NavItem({ label, href }: NavItemsProps) {
   const path = usePathname();
 
   return (
-    <Link href={href} className="relative">
+    <Link href={href}>
       <span
         className={cn(
           "text-paragraph hover:text-title transition-colors text-sm font-medium",

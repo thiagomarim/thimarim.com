@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="antialiased">
+    <html lang="pt-br" className="antialiased !scroll-smooth">
       <body className={roboto.className}>
         <Header />
         {children}
