@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 export default function AllProjects() {
   return (
     <main className="container">
-      <section className="my-40">
-        <div className="flex flex-col gap-6">
+      <section className="mb-12 mt-32 sm:mb-40">
+        <div className="flex flex-col gap-2">
           <Link href="/" className="w-min">
             <span className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-sm">
               <HiArrowNarrowLeft size={18} /> Voltar

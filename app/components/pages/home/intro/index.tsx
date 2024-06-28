@@ -8,7 +8,7 @@ export default function Intro() {
   return (
     <section className="w-full bg-intro-bg bg-no-repeat bg-left-top">
       <motion.div
-        className="container flex flex-col gap-4 mb-[120px] lg:mb-[390px] mt-[150px] sm:mt-[323px]"
+        className="container flex flex-col gap-4 mb-[195px] lg:mb-[390px] mt-[161px] sm:mt-[323px]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
