@@ -1,10 +1,18 @@
+"use client";
+
 import { Button } from "@/app/components/ui/button";
 import { TbBrandGithub, TbBrandLinkedin } from "react-icons/tb";
+import { motion } from "framer-motion";
 
 export default function Intro() {
   return (
     <section className="w-full bg-intro-bg bg-no-repeat bg-left-top">
-      <div className="container flex flex-col gap-4 mb-[120px] lg:mb-[390px] mt-[150px] sm:mt-[323px]">
+      <motion.div
+        className="container flex flex-col gap-4 mb-[120px] lg:mb-[390px] mt-[150px] sm:mt-[323px]"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         <h1 className="text-5xl sm:text-[56px]  leading-none sm:leading-[61px] font-medium">
           Desenvolvedor Front-end
         </h1>
@@ -37,7 +45,7 @@ export default function Intro() {
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
