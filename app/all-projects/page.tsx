@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function AllProjects() {
   return (
     <main className="container">
-      <section className="mt-40">
+      <section className="my-40">
         <div className="flex flex-col gap-6">
           <Link href="/" className="w-min">
             <span className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-sm">

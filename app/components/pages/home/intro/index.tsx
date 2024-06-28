@@ -20,15 +20,17 @@ export default function Intro() {
           </Button>
           <div className="flex items-center gap-4 text-zinc-700">
             <a
-              href=""
+              href="https://github.com/thiagomarim"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-gray-50 transition-colors"
             >
               <TbBrandGithub size={24} />
             </a>
             <a
-              href=""
+              href="https://www.linkedin.com/in/thiago-marim/"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-gray-50 transition-colors"
             >
               <TbBrandLinkedin size={24} />
