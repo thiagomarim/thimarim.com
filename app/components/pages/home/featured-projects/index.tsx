@@ -11,7 +11,7 @@ export default function FeaturedProjects() {
         <div>
           <SectionTitle
             title="Projetos em Destaque"
-            subtitle="Aqui estão os melhores projetos que eu já desenvolvi"
+            subtitle="Melhores projetos que eu já desenvolvi"
           />
         </div>
         <Link href="/all-projects" className="mt-6 sm:mb-0 ">
