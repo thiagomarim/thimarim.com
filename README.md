@@ -1,5 +1,7 @@
 # thiagomarim.com
 
+![portfolio-logo](https://github.com/thiagomarim/thimarim.com/assets/137715251/b0dc4cd9-d1cb-41cd-98ae-a569bde4ca7f)
+
 > Meu website pessoal <3
 
 [![Deploy with Vercel](https://vercel.com/button)](https://thiagomarim.vercel.app/)
