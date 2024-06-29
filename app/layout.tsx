@@ -12,7 +12,18 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: "Thiago Marim",
-  description: "Desenvolvedor front-end",
+  description:
+    "Portfolio pessoal de Thiago Soares Marim. Atualmente estou em busca da minha primeira oportunidade como desenvolvedor Front-end.",
+  keywords: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Portfolio",
+    "Thiago Soares Marim",
+    "Tailwind",
+  ],
+  authors: [{ name: "Thiago Soares Marim" }],
 };
 
 export default function RootLayout({
