@@ -16,9 +16,9 @@ export default function Intro() {
         <h1 className="text-5xl sm:text-[56px]  leading-none sm:leading-[61px] font-medium">
           Desenvolvedor Front-end
         </h1>
-        <p className="text-paragraph max-w-[572px] text-xl ">
-          Olá, me chamo Thiago Marim tenho 18 anos e atualmente estou localizado
-          em São Paulo, Brasil.
+        <p className="text-paragraph max-w-[572px] text-base sm:text-xl ">
+          Olá, me chamo Thiago Marim tenho 19 anos e estou atualmente em busca
+          da minha primeira oportunidade como desenvolvedor front-end.
         </p>
         <div className="flex flex-wrap gap-6 mt-2">
           <Button>

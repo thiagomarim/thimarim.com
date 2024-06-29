@@ -18,11 +18,11 @@ export default function AboutMe() {
           </span>
           .
         </p>
-        <p className="text-zinc-400 leading-8">
-          Minha paixão é criar e desenvolver websites com interfaces bonitas e
-          chamativas, com foco na experiência do usuário. Para o desenvolvimento
-          web, possuo conhecimento em <span className="text-gray-50">HTML</span>
-          , <span className="text-gray-50">CSS</span>,{" "}
+        <p className="text-paragraph leading-8">
+          Minha paixão é criar e desenvolver sites com interfaces bonitas e
+          atraentes, com foco na experiência do usuário. Possuo conhecimentos em{" "}
+          <span className="text-gray-50">HTML</span>,{" "}
+          <span className="text-gray-50">CSS</span>,{" "}
           <span className="text-gray-50">JavaScript</span>,{" "}
           <span className="text-gray-50">TypeScript</span>,
           <span className="text-gray-50">Tailwind CSS</span>,{" "}
