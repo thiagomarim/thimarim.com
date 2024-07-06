@@ -8,8 +8,7 @@ export default function AboutMe() {
         <SectionTitle title="Sobre mim" subtitle="Um pouco mais sobre mim" />
         <p className="text-paragraph leading-8">
           Olá eu me chamo Thiago Soares Marim, tenho 19 anos e resido em São
-          Paulo, Brasil. No momento, estou à procura da minha primeira
-          oportunidade de trabalho como desenvolvedor front-end. Estou cursando{" "}
+          Paulo, Brasil. Estou cursando{" "}
           <span className="text-gray-50">
             Análise e Desenvolvimento de Sistemas
           </span>{" "}
