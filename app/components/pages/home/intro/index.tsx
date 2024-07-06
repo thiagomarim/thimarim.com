@@ -17,8 +17,8 @@ export default function Intro() {
           Desenvolvedor Front-end
         </h1>
         <p className="text-paragraph max-w-[572px] text-base sm:text-xl ">
-          Olá, me chamo Thiago Marim tenho 19 anos e estou atualmente em busca
-          da minha primeira oportunidade como desenvolvedor front-end.
+          Olá, me chamo Thiago Marim tenho 19 anos e sou um desenvolvedor
+          front-end totalmente apaixonado.
         </p>
         <div className="flex flex-wrap gap-6 mt-2">
           <Button>
