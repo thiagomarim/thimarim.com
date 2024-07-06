@@ -1,6 +1,6 @@
 # thiagomarim.com
 
-![portfolio-logo](https://github.com/thiagomarim/thimarim.com/assets/137715251/b0dc4cd9-d1cb-41cd-98ae-a569bde4ca7f)
+![portfolio-banner](https://github.com/thiagomarim/thimarim.com/assets/137715251/3e960f1c-1805-4c1a-a22c-ad848bbd293e)
 
 > Meu website pessoal <3
 
