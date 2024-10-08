@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import Contact from "./components/contact";
+import CommandBar from "./components/commandBar";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -34,12 +35,14 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className="antialiased !scroll-smooth">
       <body className={roboto.className}>
-        <div className="App">
-          <Header />
-          <main className="AppBody">{children}</main>
-          <Contact />
-          <Footer />
-        </div>
+        <CommandBar>
+          <div className="App">
+            <Header />
+            <main className="AppBody">{children}</main>
+            <Contact />
+            <Footer />
+          </div>
+        </CommandBar>
       </body>
     </html>
   );
