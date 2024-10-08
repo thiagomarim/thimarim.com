@@ -7,16 +7,20 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Logo from "@/public/thi-logo.svg";
+import { useKBar } from "kbar";
+import { MdOutlineKeyboardCommandKey } from "react-icons/md";
 
 const pages = ["About", "Projects", "Stack", "Contact"];
 
 export default function Header() {
   const [hovered, setHovered] = useState<string>("");
+  const { query } = useKBar();
+
   const pathname = usePathname();
 
   return (
     <AnimatePresence>
-      <header className="flex items-center text-white text-[12px] w-full absolute top-0 z-30">
+      <header className="flex items-center text-white text-[12px] w-full absolute top-0 z-30 py-4">
         <Link href="/" passHref>
           <div className="ml-12">
             <Image src={Logo} width={48} height={48} alt="Logo" />
@@ -24,7 +28,7 @@ export default function Header() {
         </Link>
 
         <nav className="text-center flex-1 order-2 basis-full">
-          <ul className="m-0 p-0 list-none inline-flex relative top-[5px]">
+          <ul className="m-0 p-0 list-none inline-flex relative top-0">
             {pages.map((page) => {
               const path = `/${page.toLowerCase()}`;
               const isHovered = hovered === page;
@@ -49,7 +53,7 @@ export default function Header() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            className="absolute -top-[15px] left-0 right-0 bg-buttonSecondary p-5 rounded-lg z-[-1]"
+                            className="absolute -top-[13px] left-0 right-0 bg-buttonSecondary p-5 rounded-lg z-[-1]"
                           />
                         )}
                         {page}
@@ -61,6 +65,19 @@ export default function Header() {
             })}
           </ul>
         </nav>
+
+        <aside className="mr-12 ml-auto order-3">
+          <button
+            className="border-none rounded-lg text-white hover:bg-buttonSecondary hover:transition-colors cursor-pointer h-[34px] px-2"
+            type="button"
+            aria-label="Command"
+            onClick={query.toggle}
+          >
+            <kbd className="text-2xl tracking-[32px] ri-command-line">
+              <MdOutlineKeyboardCommandKey size={24} />
+            </kbd>
+          </button>
+        </aside>
       </header>
     </AnimatePresence>
   );

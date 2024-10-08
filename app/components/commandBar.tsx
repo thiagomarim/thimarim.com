@@ -85,7 +85,7 @@ export default function CommandBar({ children }: CommandBarProps) {
       name: "Home",
       shortcut: ["g", "h"],
       keywords: "go-home",
-      section: "Ir para",
+      section: "Navegação",
       perform: () => router.push("/"),
       icon: (
         <Lottie
@@ -102,7 +102,7 @@ export default function CommandBar({ children }: CommandBarProps) {
       name: "About",
       shortcut: ["g", "a"],
       keywords: "go-about",
-      section: "Ir para",
+      section: "Navegação",
       perform: () => router.push("/about"),
       icon: (
         <Lottie
@@ -119,7 +119,7 @@ export default function CommandBar({ children }: CommandBarProps) {
       name: "Projects",
       shortcut: ["g", "p"],
       keywords: "go-projects",
-      section: "Ir para",
+      section: "Navegação",
       perform: () => router.push("/projects"),
       icon: (
         <Lottie
@@ -136,7 +136,7 @@ export default function CommandBar({ children }: CommandBarProps) {
       name: "Stack",
       shortcut: ["g", "s"],
       keywords: "go-stack",
-      section: "Ir para",
+      section: "Navegação",
       perform: () => router.push("/stack"),
       icon: (
         <Lottie
