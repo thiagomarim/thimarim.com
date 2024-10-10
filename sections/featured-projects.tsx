@@ -14,7 +14,7 @@ export default function FeaturedProjects() {
             subtitle="Melhores projetos que eu já desenvolvi"
           />
         </div>
-        <Link href="/all-projects" className="mt-6 sm:mb-0 ">
+        <Link href="/projects" className="mt-6 sm:mb-0 ">
           <span className="flex items-center gap-2 text-sm hover:underline hover:underline-offset-4">
             Ver todos <HiArrowNarrowRight size={18} />
           </span>
@@ -26,7 +26,7 @@ export default function FeaturedProjects() {
         ))}
       </div>
       <div className="mt-12 w-max sm:mt-16">
-        <Link href="/all-projects">
+        <Link href="/projects">
           <span className="flex items-center gap-2 text-sm hover:underline hover:underline-offset-4">
             Ver todos <HiArrowNarrowRight size={18} />
           </span>
