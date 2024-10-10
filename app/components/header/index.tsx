@@ -1,43 +1,82 @@
 "use client";
 
 import Link from "next/link";
-import NavItem from "./nav-items";
-import Image from "next/image";
-import { Button } from "../ui/button";
+import { usePathname } from "next/navigation";
+import { cn } from "@/app/lib/utils";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useKBar } from "kbar";
+import { MdOutlineKeyboardCommandKey } from "react-icons/md";
 
-export const NAV_ITEMS = [
-  {
-    label: "Home",
-    href: "/",
-  },
-  {
-    label: "Projetos",
-    href: "/all-projects",
-  },
-];
+const pages = ["Projects", "Contact"];
 
 export default function Header() {
+  const [hovered, setHovered] = useState<string>("");
+  const { query } = useKBar();
+
+  const pathname = usePathname();
+
   return (
-    <header className="w-full flex items-center justify-center">
-      <div className="fixed top-0 flex items-center gap-6 sm:gap-[50px] mt-6 px-5 py-3 border border-border rounded-2xl w-max bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-        <Link href="/">
-          <Image src="/logo.svg" alt="Logo Pessoal" width={101} height={24} />
-        </Link>
-        <nav className="flex items-center gap-6 sm:gap-[50px]">
-          <ul className="flex items-center gap-6 sm:gap-[50px]">
-            {NAV_ITEMS.map((item) => (
-              <li key={item.label}>
-                <NavItem {...item} />
-              </li>
-            ))}
-          </ul>
-          <Link href="#contact">
-            <Button variant={"default"} size={"sm"}>
-              Contato
-            </Button>
+    <AnimatePresence>
+      <header className="flex w-full items-center justify-center">
+        <div className="flex items-center text-white text-[12px] justify-center container absolute top-0 z-30 py-4">
+          <Link href="/" passHref className="w-max">
+            <span className="text-xl font-medium tracking-wider">thimarim</span>
           </Link>
-        </nav>
-      </div>
-    </header>
+
+          <nav className="text-center flex-1 order-2 basis-full">
+            <ul className="m-0 p-0 list-none inline-flex relative top-0">
+              {pages.map((page) => {
+                const path = `/${page.toLowerCase()}`;
+                const isHovered = hovered === page;
+
+                return (
+                  <li key={page}>
+                    <Link href={path} passHref legacyBehavior>
+                      <a className="border-0 relative hover:opacity-100 focus:opacity-100">
+                        <motion.span
+                          onMouseEnter={() => setHovered(page)}
+                          onMouseLeave={() => setHovered("")}
+                          className={cn(
+                            "text-paragraph cursor-pointer inline-block text-xs font-medium tracking-[1.2px] p-5 no-underline uppercase transition-colors hover:text-[#f2f2f2] after:content-[''] after:absolute after:top-[18px] after:left-0 after:right-0 after:h-[1px] after:w-[20px] after:bg-white after:opacity-0 after:mx-auto",
+                            pathname === path &&
+                              "text-title hover:text-[#f2f2f2] transition-colors after:opacity-100"
+                          )}
+                        >
+                          {isHovered && (
+                            <motion.span
+                              layoutId="nav"
+                              transition={{ type: "tween", duration: 0.4 }}
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 1 }}
+                              exit={{ opacity: 0 }}
+                              className="absolute -top-[13px] left-0 right-0 bg-buttonSecondary p-5 rounded-lg z-[-1]"
+                            />
+                          )}
+                          {page}
+                        </motion.span>
+                      </a>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+
+          <aside className="order-3">
+            <button
+              className="border-none rounded-lg text-white hover:bg-buttonSecondary hover:transition-colors cursor-pointer h-[34px] px-2"
+              type="button"
+              aria-label="Command"
+              onClick={query.toggle}
+            >
+              <kbd className="text-2xl tracking-[32px] ri-command-line">
+                <MdOutlineKeyboardCommandKey size={24} />
+              </kbd>
+            </button>
+          </aside>
+        </div>
+      </header>
+    </AnimatePresence>
   );
 }
