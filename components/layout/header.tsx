@@ -1,22 +1,22 @@
-"use client";
+'use client'
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { cn } from "@/app/lib/utils";
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
-import Logo from "@/public/thi-logo.svg";
-import { useKBar } from "kbar";
-import { MdOutlineKeyboardCommandKey } from "react-icons/md";
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { cn } from '@/lib/utils'
+import { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+import Image from 'next/image'
+import Logo from '@/public/thi-logo.svg'
+import { useKBar } from 'kbar'
+import { MdOutlineKeyboardCommandKey } from 'react-icons/md'
 
-const pages = ["About", "Projects", "Stack", "Contact"];
+const pages = ['About', 'Projects', 'Stack', 'Contact']
 
 export default function Header() {
-  const [hovered, setHovered] = useState<string>("");
-  const { query } = useKBar();
+  const [hovered, setHovered] = useState<string>('')
+  const { query } = useKBar()
 
-  const pathname = usePathname();
+  const pathname = usePathname()
 
   return (
     <AnimatePresence>
@@ -30,8 +30,8 @@ export default function Header() {
         <nav className="text-center flex-1 order-2 basis-full">
           <ul className="m-0 p-0 list-none inline-flex relative top-0">
             {pages.map((page) => {
-              const path = `/${page.toLowerCase()}`;
-              const isHovered = hovered === page;
+              const path = `/${page.toLowerCase()}`
+              const isHovered = hovered === page
 
               return (
                 <li key={page}>
@@ -39,17 +39,17 @@ export default function Header() {
                     <a className="border-0 relative hover:opacity-100 focus:opacity-100">
                       <motion.span
                         onMouseEnter={() => setHovered(page)}
-                        onMouseLeave={() => setHovered("")}
+                        onMouseLeave={() => setHovered('')}
                         className={cn(
                           "text-paragraph cursor-pointer inline-block text-xs font-medium tracking-[1.2px] p-5 no-underline uppercase transition-colors hover:text-[#f2f2f2] after:content-[''] after:absolute after:top-[18px] after:left-0 after:right-0 after:h-[1px] after:w-[20px] after:bg-white after:opacity-0 after:mx-auto",
                           pathname === path &&
-                            "text-title hover:text-[#f2f2f2] transition-colors after:opacity-100"
+                            'text-title hover:text-[#f2f2f2] transition-colors after:opacity-100',
                         )}
                       >
                         {isHovered && (
                           <motion.span
                             layoutId="nav"
-                            transition={{ type: "tween", duration: 0.4 }}
+                            transition={{ type: 'tween', duration: 0.4 }}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
@@ -61,7 +61,7 @@ export default function Header() {
                     </a>
                   </Link>
                 </li>
-              );
+              )
             })}
           </ul>
         </nav>
@@ -80,5 +80,5 @@ export default function Header() {
         </aside>
       </header>
     </AnimatePresence>
-  );
+  )
 }

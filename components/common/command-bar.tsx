@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import {
   KBarAnimator,
@@ -8,50 +8,50 @@ import {
   KBarResults,
   KBarSearch,
   useMatches,
-} from "kbar";
+} from 'kbar'
 import React, {
   forwardRef,
   HTMLAttributes,
   ReactElement,
   ReactNode,
   useRef,
-} from "react";
-import { cn } from "../lib/utils";
-import Lottie, { LottieRefCurrentProps } from "lottie-react";
-import { useRouter } from "next/navigation";
+} from 'react'
+import { cn } from '../../lib/utils'
+import Lottie, { LottieRefCurrentProps } from 'lottie-react'
+import { useRouter } from 'next/navigation'
 
-import emailIcon from "@/public/icons/email.json";
-import copyLinkIcon from "@/public/icons/copy-link.json";
-import homeIcon from "@/public/icons/home.json";
-import aboutIcon from "@/public/icons/about.json";
-import projectsIcon from "@/public/icons/projects.json";
-import figIcon from "@/public/icons/fig.json";
+import emailIcon from '@/public/icons/email.json'
+import copyLinkIcon from '@/public/icons/copy-link.json'
+import homeIcon from '@/public/icons/home.json'
+import aboutIcon from '@/public/icons/about.json'
+import projectsIcon from '@/public/icons/projects.json'
+import figIcon from '@/public/icons/fig.json'
 
 interface CommandBarProps extends HTMLAttributes<HTMLElement> {}
 
 export default function CommandBar({ children }: CommandBarProps) {
   const copyLink = () => {
-    navigator.clipboard.writeText(window.location.href);
-  };
+    navigator.clipboard.writeText(window.location.href)
+  }
 
-  const iconSize = { width: 24, height: 24 };
+  const iconSize = { width: 24, height: 24 }
 
-  const router = useRouter();
+  const router = useRouter()
 
-  const emailRef = useRef<LottieRefCurrentProps | null>(null);
-  const copyLinkRef = useRef<LottieRefCurrentProps | null>(null);
-  const homeRef = useRef<LottieRefCurrentProps | null>(null);
-  const aboutRef = useRef<LottieRefCurrentProps | null>(null);
-  const projectsRef = useRef<LottieRefCurrentProps | null>(null);
-  const stackRef = useRef<LottieRefCurrentProps | null>(null);
+  const emailRef = useRef<LottieRefCurrentProps | null>(null)
+  const copyLinkRef = useRef<LottieRefCurrentProps | null>(null)
+  const homeRef = useRef<LottieRefCurrentProps | null>(null)
+  const aboutRef = useRef<LottieRefCurrentProps | null>(null)
+  const projectsRef = useRef<LottieRefCurrentProps | null>(null)
+  const stackRef = useRef<LottieRefCurrentProps | null>(null)
 
   const actions = [
     {
-      id: "copy",
-      name: "Copiar Link",
-      shortcut: ["l"],
-      keywords: "copy-link",
-      section: "Geral",
+      id: 'copy',
+      name: 'Copiar Link',
+      shortcut: ['l'],
+      keywords: 'copy-link',
+      section: 'Geral',
       perform: copyLink,
       icon: (
         <Lottie
@@ -64,12 +64,12 @@ export default function CommandBar({ children }: CommandBarProps) {
       ),
     },
     {
-      id: "email",
-      name: "Enviar Email",
-      shortcut: ["e"],
-      keywords: "send-email",
-      section: "Geral",
-      perform: () => router.push("/contact", { scroll: false }),
+      id: 'email',
+      name: 'Enviar Email',
+      shortcut: ['e'],
+      keywords: 'send-email',
+      section: 'Geral',
+      perform: () => router.push('/contact', { scroll: false }),
       icon: (
         <Lottie
           lottieRef={emailRef}
@@ -81,12 +81,12 @@ export default function CommandBar({ children }: CommandBarProps) {
       ),
     },
     {
-      id: "home",
-      name: "Home",
-      shortcut: ["g", "h"],
-      keywords: "go-home",
-      section: "Navegação",
-      perform: () => router.push("/"),
+      id: 'home',
+      name: 'Home',
+      shortcut: ['g', 'h'],
+      keywords: 'go-home',
+      section: 'Navegação',
+      perform: () => router.push('/'),
       icon: (
         <Lottie
           lottieRef={homeRef}
@@ -98,12 +98,12 @@ export default function CommandBar({ children }: CommandBarProps) {
       ),
     },
     {
-      id: "about",
-      name: "About",
-      shortcut: ["g", "a"],
-      keywords: "go-about",
-      section: "Navegação",
-      perform: () => router.push("/about"),
+      id: 'about',
+      name: 'About',
+      shortcut: ['g', 'a'],
+      keywords: 'go-about',
+      section: 'Navegação',
+      perform: () => router.push('/about'),
       icon: (
         <Lottie
           lottieRef={aboutRef}
@@ -115,12 +115,12 @@ export default function CommandBar({ children }: CommandBarProps) {
       ),
     },
     {
-      id: "projects",
-      name: "Projects",
-      shortcut: ["g", "p"],
-      keywords: "go-projects",
-      section: "Navegação",
-      perform: () => router.push("/projects"),
+      id: 'projects',
+      name: 'Projects',
+      shortcut: ['g', 'p'],
+      keywords: 'go-projects',
+      section: 'Navegação',
+      perform: () => router.push('/projects'),
       icon: (
         <Lottie
           lottieRef={projectsRef}
@@ -132,12 +132,12 @@ export default function CommandBar({ children }: CommandBarProps) {
       ),
     },
     {
-      id: "stack",
-      name: "Stack",
-      shortcut: ["g", "s"],
-      keywords: "go-stack",
-      section: "Navegação",
-      perform: () => router.push("/stack"),
+      id: 'stack',
+      name: 'Stack',
+      shortcut: ['g', 's'],
+      keywords: 'go-stack',
+      section: 'Navegação',
+      perform: () => router.push('/stack'),
       icon: (
         <Lottie
           lottieRef={stackRef}
@@ -148,7 +148,7 @@ export default function CommandBar({ children }: CommandBarProps) {
         />
       ),
     },
-  ];
+  ]
 
   return (
     <KBarProvider actions={actions}>
@@ -165,16 +165,16 @@ export default function CommandBar({ children }: CommandBarProps) {
       </KBarPortal>
       {children}
     </KBarProvider>
-  );
+  )
 }
 function RenderResults() {
-  const { results } = useMatches();
+  const { results } = useMatches()
 
   return (
     <KBarResults
       items={results}
       onRender={({ item, active }) =>
-        typeof item === "string" ? (
+        typeof item === 'string' ? (
           <div className="py-2 px-4 text-[10px] uppercase bg-background">
             {item}
           </div>
@@ -183,48 +183,47 @@ function RenderResults() {
         )
       }
     />
-  );
+  )
 }
 
 interface IconProps {
-  lottieRef: React.RefObject<LottieRefCurrentProps>;
+  lottieRef: React.RefObject<LottieRefCurrentProps>
 }
 
 interface ActionImpl {
-  icon: ReactNode;
-  name: string;
-  shortcut?: string[];
+  icon: ReactNode
+  name: string
+  shortcut?: string[]
 }
 
-type Ref = React.Ref<HTMLDivElement>;
+type Ref = React.Ref<HTMLDivElement>
 
 interface ResultItemProps {
-  action: ActionImpl;
-  active: boolean;
+  action: ActionImpl
+  active: boolean
 }
 
 const ResultItem = forwardRef<HTMLDivElement, ResultItemProps>(
   ({ action, active }, ref: Ref) => {
     const isLottieIcon =
       React.isValidElement(action.icon) &&
-      "lottieRef" in action.icon.props &&
-      action.icon.props.lottieRef?.current;
+      'lottieRef' in action.icon.props &&
+      action.icon.props.lottieRef?.current
 
     if (isLottieIcon) {
-      const lottieRef = (action.icon as ReactElement<IconProps>).props
-        .lottieRef;
+      const lottieRef = (action.icon as ReactElement<IconProps>).props.lottieRef
       if (active) {
-        lottieRef.current?.play();
+        lottieRef.current?.play()
       } else {
-        lottieRef.current?.stop();
+        lottieRef.current?.stop()
       }
     }
     return (
       <div
         ref={ref}
         className={cn(
-          "px-4 py-3 flex items-center justify-between cursor-pointer bg-background text-paragraph",
-          active ? "text-title" : ""
+          'px-4 py-3 flex items-center justify-between cursor-pointer bg-background text-paragraph',
+          active ? 'text-title' : '',
         )}
         onMouseEnter={() =>
           isLottieIcon &&
@@ -258,8 +257,8 @@ const ResultItem = forwardRef<HTMLDivElement, ResultItemProps>(
           </div>
         ) : null}
       </div>
-    );
-  }
-);
+    )
+  },
+)
 
-ResultItem.displayName = "ResultItem";
+ResultItem.displayName = 'ResultItem'

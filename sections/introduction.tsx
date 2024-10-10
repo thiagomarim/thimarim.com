@@ -1,10 +1,10 @@
-"use client";
+'use client'
 
-import { Button } from "@/app/components/ui/button";
-import { TbBrandGithub, TbBrandLinkedin } from "react-icons/tb";
-import { motion } from "framer-motion";
+import { Button } from '@/components/ui/button'
+import { TbBrandGithub, TbBrandLinkedin } from 'react-icons/tb'
+import { motion } from 'framer-motion'
 
-export default function Intro() {
+export default function Introduction() {
   return (
     <section className="w-full bg-intro-bg bg-no-repeat bg-left-top">
       <motion.div
@@ -47,5 +47,5 @@ export default function Intro() {
         </div>
       </motion.div>
     </section>
-  );
+  )
 }
