@@ -1,8 +1,8 @@
-import Link from "next/link";
-import { HiArrowNarrowRight } from "react-icons/hi";
-import ProjectCard from "./project-card";
-import { ProjectsList } from "@/app/data/projects";
-import { SectionTitle } from "@/app/components/ui/section-title";
+import Link from 'next/link'
+import { HiArrowNarrowRight } from 'react-icons/hi'
+import ProjectCard from '@/components/layout/project-card'
+import { ProjectsList } from '@/data/projects'
+import { SectionTitle } from '@/components/ui/section-title'
 
 export default function FeaturedProjects() {
   return (
@@ -33,5 +33,5 @@ export default function FeaturedProjects() {
         </Link>
       </div>
     </section>
-  );
+  )
 }

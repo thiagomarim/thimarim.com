@@ -1,30 +1,30 @@
-import { MdOutlineEmail } from "react-icons/md";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { SectionTitle } from "@/app/components/ui/section-title";
+import { MdOutlineEmail } from 'react-icons/md'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { SectionTitle } from '@/components/ui/section-title'
 
 const INFO_CONTACT = [
   {
-    title: "E-mail",
-    subtitle: "Me envie um e-mail.",
+    title: 'E-mail',
+    subtitle: 'Me envie um e-mail.',
     icon: <MdOutlineEmail size={20} />,
-    href: "mailto:thiago.marim2005@gmail.com",
-    buttonText: "Enviar",
+    href: 'mailto:thiago.marim2005@gmail.com',
+    buttonText: 'Enviar',
   },
   {
-    title: "Linkedin",
-    subtitle: "Venha saber mais sobre mim.",
+    title: 'Linkedin',
+    subtitle: 'Venha saber mais sobre mim.',
     icon: <FaLinkedin size={20} />,
-    href: "https://www.linkedin.com/in/thiago-marim/",
-    buttonText: "Visitar",
+    href: 'https://www.linkedin.com/in/thiago-marim/',
+    buttonText: 'Visitar',
   },
   {
-    title: "Github",
-    subtitle: "Venha ver todos os meus projetos.",
+    title: 'Github',
+    subtitle: 'Venha ver todos os meus projetos.',
     icon: <FaGithub size={20} />,
-    href: "https://github.com/thiagomarim",
-    buttonText: "Visitar",
+    href: 'https://github.com/thiagomarim',
+    buttonText: 'Visitar',
   },
-];
+]
 
 export default function Contact() {
   return (
@@ -51,5 +51,5 @@ export default function Contact() {
         ))}
       </div>
     </section>
-  );
+  )
 }

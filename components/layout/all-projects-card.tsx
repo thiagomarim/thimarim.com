@@ -1,12 +1,12 @@
-import Image from "next/image";
-import { MdArrowOutward } from "react-icons/md";
-import { TbBrandGithub } from "react-icons/tb";
-import { ProjectsListProps } from "@/app/data/projects";
-import { Badge } from "@/app/components/ui/badge";
-import { Button } from "@/app/components/ui/button";
+import Image from 'next/image'
+import { MdArrowOutward } from 'react-icons/md'
+import { TbBrandGithub } from 'react-icons/tb'
+import { ProjectsListProps } from '@/data/projects'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 
 interface AllProjectsCardProps {
-  project: ProjectsListProps;
+  project: ProjectsListProps
 }
 
 export default function AllProjectsCard({ project }: AllProjectsCardProps) {
@@ -36,7 +36,7 @@ export default function AllProjectsCard({ project }: AllProjectsCardProps) {
           </div>
 
           <div className="flex items-center gap-6 mt-2">
-            <Button variant={"link"} size={"sm"}>
+            <Button variant={'link'} size={'sm'}>
               <a
                 href={project.live}
                 className="flex items-center gap-2"
@@ -46,7 +46,7 @@ export default function AllProjectsCard({ project }: AllProjectsCardProps) {
                 Visitar <MdArrowOutward size={18} />
               </a>
             </Button>
-            <Button variant={"link"} size={"sm"}>
+            <Button variant={'link'} size={'sm'}>
               <a
                 href={project.repo}
                 className="flex items-center gap-2"
@@ -60,5 +60,5 @@ export default function AllProjectsCard({ project }: AllProjectsCardProps) {
         </div>
       </div>
     </div>
-  );
+  )
 }
