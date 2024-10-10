@@ -1,12 +1,12 @@
-import Image from "next/image";
-import { MdArrowOutward } from "react-icons/md";
-import { TbBrandGithub } from "react-icons/tb";
-import { ProjectsListProps } from "@/app/data/projects";
-import { Badge } from "@/app/components/ui/badge";
-import { Button } from "@/app/components/ui/button";
+import Image from 'next/image'
+import { MdArrowOutward } from 'react-icons/md'
+import { TbBrandGithub } from 'react-icons/tb'
+import { ProjectsListProps } from '@/data/projects'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 
 interface ProjectCardProps {
-  project: ProjectsListProps;
+  project: ProjectsListProps
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
@@ -29,7 +29,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
         <div className="flex items-center gap-6">
-          <Button variant={"link"}>
+          <Button variant={'link'}>
             <a
               href={project.live}
               className="flex items-center gap-2"
@@ -39,7 +39,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               Visitar <MdArrowOutward size={18} />
             </a>
           </Button>
-          <Button variant={"link"}>
+          <Button variant={'link'}>
             <a
               href={project.repo}
               className="flex items-center gap-2"
@@ -52,5 +52,5 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,14 +1,14 @@
-import Link from "next/link";
-import { HiArrowNarrowLeft } from "react-icons/hi";
-import { ProjectsList } from "../data/projects";
-import { SectionTitle } from "../components/ui/section-title";
-import AllProjectsCard from "../components/pages/all-projects/all-projects-card";
-import { Metadata } from "next";
+import Link from 'next/link'
+import { HiArrowNarrowLeft } from 'react-icons/hi'
+import { ProjectsList } from '@/data/projects'
+import { SectionTitle } from '@/components/ui/section-title'
+import AllProjectsCard from '@/components/layout/all-projects-card'
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Projetos // Thiago Marim",
-  description: "Desenvolvedor front-end",
-};
+  title: 'Projetos // Thiago Marim',
+  description: 'Desenvolvedor front-end',
+}
 
 export default function AllProjects() {
   return (
@@ -32,5 +32,5 @@ export default function AllProjects() {
         </div>
       </section>
     </main>
-  );
+  )
 }

@@ -1,36 +1,36 @@
-import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
-import "./globals.css";
-import Header from "./components/header";
-import Footer from "./components/footer";
-import Contact from "./components/contact";
-import CommandBar from "./components/commandBar";
+import type { Metadata } from 'next'
+import { Roboto } from 'next/font/google'
+import './globals.css'
+import Header from '@/components/layout/header'
+import Footer from '@/components/layout/footer'
+import Contact from '@/components/layout/contact'
+import CommandBar from '@/components/common/command-bar'
 
 const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "700", "900"],
-});
+  subsets: ['latin'],
+  weight: ['100', '300', '400', '500', '700', '900'],
+})
 
 export const metadata: Metadata = {
-  title: "Thiago Marim",
+  title: 'Thiago Marim',
   description:
-    "Portfolio pessoal de Thiago Soares Marim. Atualmente estou em busca da minha primeira oportunidade como desenvolvedor Front-end.",
+    'Portfolio pessoal de Thiago Soares Marim. Atualmente estou em busca da minha primeira oportunidade como desenvolvedor Front-end.',
   keywords: [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Portfolio",
-    "Thiago Soares Marim",
-    "Tailwind",
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Portfolio',
+    'Thiago Soares Marim',
+    'Tailwind',
   ],
-  authors: [{ name: "Thiago Soares Marim" }],
-};
+  authors: [{ name: 'Thiago Soares Marim' }],
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="pt-br" className="antialiased !scroll-smooth">
@@ -45,5 +45,5 @@ export default function RootLayout({
         </CommandBar>
       </body>
     </html>
-  );
+  )
 }
