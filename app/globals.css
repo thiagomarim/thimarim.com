@@ -11,7 +11,9 @@
 .App {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh + 10rem);
+  min-height: 100vh;
+  position: relative;
+  z-index: 0;
 }
 
 .AppBody {

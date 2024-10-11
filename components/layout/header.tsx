@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { useKBar } from 'kbar'
 import { MdOutlineKeyboardCommandKey } from 'react-icons/md'
 
-const pages = ['Projects']
+const pages = ['About', 'Projects']
 
 export default function Header() {
   const [hovered, setHovered] = useState<string>('')

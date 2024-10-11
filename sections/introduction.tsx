@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { TbBrandGithub, TbBrandLinkedin } from 'react-icons/tb'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 export default function Introduction() {
   return (
@@ -13,18 +14,26 @@ export default function Introduction() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-5xl sm:text-[56px]  leading-none sm:leading-[61px] font-medium">
-          Desenvolvedor Front-end
+        <h1 className="text-5xl leading-none sm:leading-[50px] font-semibold">
+          Thiago Marim
         </h1>
-        <p className="text-paragraph max-w-[572px] text-base sm:text-xl ">
-          Olá, me chamo Thiago Marim tenho 19 anos e sou um desenvolvedor
-          front-end totalmente apaixonado.
+        <p className="text-paragraph max-w-[572px] text-lg sm:text-xl leading-8">
+          Olá, me chamo Thiago Marim tenho 19 anos e sou desenvolvedor front-end
+          pela{' '}
+          <a
+            href="https://shakersagencia.com.br/"
+            target="_blank"
+            className="text-title transition-colors"
+          >
+            Shakers Agencia
+          </a>
+          .
         </p>
         <div className="flex flex-wrap gap-6 mt-2">
           <Button>
-            <a href="#contact" className="flex items-center gap-2">
-              Entrar em contato
-            </a>
+            <Link href="/about" className="flex items-center gap-2">
+              Ler mais sobre mim
+            </Link>
           </Button>
           <div className="flex items-center gap-4 text-zinc-700">
             <a

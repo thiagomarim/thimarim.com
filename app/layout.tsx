@@ -1,15 +1,9 @@
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
+import { GeistSans } from 'geist/font/sans'
 import './globals.css'
 import Header from '@/components/layout/header'
 import Footer from '@/components/layout/footer'
-import Contact from '@/components/layout/contact'
 import CommandBar from '@/components/common/command-bar'
-
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['100', '300', '400', '500', '700', '900'],
-})
 
 export const metadata: Metadata = {
   title: 'Thiago Marim',
@@ -34,12 +28,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br" className="antialiased !scroll-smooth">
-      <body className={roboto.className}>
+      <body className={GeistSans.className}>
         <CommandBar>
           <div className="App">
             <Header />
             <main className="AppBody">{children}</main>
-            <Contact />
             <Footer />
           </div>
         </CommandBar>
