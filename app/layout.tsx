@@ -30,9 +30,9 @@ export default function RootLayout({
     <html lang="pt-br" className="antialiased !scroll-smooth">
       <body className={GeistSans.className}>
         <CommandBar>
-          <div className="App">
+          <div className="flex flex-col min-h-screen relative z-0">
             <Header />
-            <main className="AppBody">{children}</main>
+            <main className="flex-1 container">{children}</main>
             <Footer />
           </div>
         </CommandBar>

@@ -8,7 +8,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 export default function Home() {
   return (
     <motion.section
-      className="container flex flex-col gap-4 items-center sm:items-start sm:text-start text-center"
+      className="container flex flex-col gap-4 justify-center  px-0 overflow-hidden flex-1 py-[260px] items-center sm:items-start sm:text-start text-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}

@@ -8,22 +8,6 @@
   }
 }
 
-.App {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  position: relative;
-  z-index: 0;
-}
-
-.AppBody {
-  display: flex;
-  align-items: center;
-  padding: 110px 0;
-  overflow: hidden;
-  flex: 1 1 0%;
-}
-
 .container {
   @apply mx-auto w-full max-w-[1200px] px-6;
 }
