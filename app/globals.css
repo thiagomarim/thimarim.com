@@ -17,7 +17,11 @@
 }
 
 .AppBody {
-  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 110px 0;
+  overflow: hidden;
+  flex: 1 1 0%;
 }
 
 .container {

@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { useKBar } from 'kbar'
 import { MdOutlineKeyboardCommandKey } from 'react-icons/md'
 
-const pages = ['About', 'Projects']
+const pages = ['About', 'Projects', 'Stack', 'Contact', 'Resume']
 
 export default function Header() {
   const [hovered, setHovered] = useState<string>('')
@@ -18,10 +18,10 @@ export default function Header() {
 
   return (
     <AnimatePresence>
-      <header className="flex w-full items-center justify-center">
+      <header className="flex w-full items-center justify-center h-[88px]">
         <div className="flex items-center text-white text-[12px] justify-center container absolute top-0 z-30 py-4">
           <Link href="/" passHref className="w-max">
-            <span className="text-xl font-medium tracking-wider">thimarim</span>
+            <span className="text-lg font-bold tracking-wider">thimarim</span>
           </Link>
 
           <nav className="text-center flex-1 order-2 basis-full">
