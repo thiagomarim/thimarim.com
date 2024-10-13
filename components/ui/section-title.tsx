@@ -2,21 +2,30 @@ import { cn } from '@/lib/utils'
 
 interface SectionTitleProps {
   title: string
+  titleSize?: 'sm' | 'md' | 'lg'
   subtitle?: string
 }
 
-export function SectionTitle({ title, subtitle }: SectionTitleProps) {
+export function SectionTitle({
+  title,
+  subtitle,
+  titleSize,
+}: SectionTitleProps) {
   return (
-    <div className="flex flex-col gap-4">
-      <span
+    <div className="flex flex-col gap-5">
+      <h1
         className={cn(
-          "flex text-[#e3e4e6] items-center gap-2 text-sm before:block before:content-[''] before:w-[14px] before:h-2 before:rounded-full before:bg-emerald-500",
-          subtitle === undefined && 'before:w-[0px] before:h-0',
+          'font-bold',
+          titleSize === 'sm' && 'text-4xl',
+          titleSize === 'md' && 'text-5xl',
+          titleSize === 'lg' && 'text-[64px] leading-[4.2rem]',
         )}
       >
-        {subtitle}
-      </span>
-      <h2 className="text-4xl font-medium tracking-[-0.47px]">{title}</h2>
+        {title}
+      </h1>
+      {subtitle && (
+        <p className="text-base text-paragraph leading-8">{subtitle}</p>
+      )}
     </div>
   )
 }

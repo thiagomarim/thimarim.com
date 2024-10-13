@@ -5,6 +5,7 @@ import { HiArrowNarrowLeft } from 'react-icons/hi'
 import { ProjectsList } from '@/data/projects'
 import AllProjectsCard from '@/components/layout/all-projects-card'
 import { motion } from 'framer-motion'
+import { SectionTitle } from '@/components/ui/section-title'
 
 export default function AllProjects() {
   return (
@@ -15,13 +16,17 @@ export default function AllProjects() {
       className="py-5"
     >
       <section>
-        <div className="flex  justify-between items-center">
-          <h1 className="text-5xl font-bold">Todos projetos</h1>
-          <Link href="/projects" className="w-min">
+        <div className="flex flex-wrap justify-between items-start">
+          <Link href="/projects" className="w-min mb-4">
             <span className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-sm">
               <HiArrowNarrowLeft size={18} /> Voltar
             </span>
           </Link>
+          <SectionTitle
+            title="Todos os projetos"
+            titleSize="sm"
+            subtitle="Nesta seção, você encontrará uma compilação abrangente de todos os projetos que já desenvolvi ao longo da minha carreira. Esta coleção diversificada representa minha jornada completa como desenvolvedor, desde os primeiros trabalhos até os mais recentes."
+          />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(350px,1fr))] mt-12 gap-6">

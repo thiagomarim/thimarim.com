@@ -3,6 +3,7 @@
 import Career from '@/sections/career'
 import { About as AboutProps } from '@/data/about'
 import { motion } from 'framer-motion'
+import { SectionTitle } from '@/components/ui/section-title'
 
 const techs = [
   'HTML',
@@ -24,7 +25,7 @@ export default function About() {
       className="py-5"
     >
       <section>
-        <h1 className="text-5xl font-bold">Um pouco sobre mim</h1>
+        <SectionTitle title="Um pouco mais sobre mim" titleSize="sm" />
         <div className="flex justify-between mt-10 gap-6 flex-wrap md:flex-nowrap">
           <div className="min-w-[450px] min-h-[400px] bg-buttonSecondary rounded-xl" />
           <div className="flex flex-col gap-5 max-w-[620px]">
