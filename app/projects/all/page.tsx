@@ -1,28 +1,27 @@
+'use client'
+
 import Link from 'next/link'
 import { HiArrowNarrowLeft } from 'react-icons/hi'
 import { ProjectsList } from '@/data/projects'
-import { SectionTitle } from '@/components/ui/section-title'
 import AllProjectsCard from '@/components/layout/all-projects-card'
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Projetos // Thiago Marim',
-  description: 'Desenvolvedor front-end',
-}
+import { motion } from 'framer-motion'
 
 export default function AllProjects() {
   return (
-    <main className="container">
-      <section className="mb-12 mt-32 sm:mb-40">
-        <div className="flex flex-col gap-2">
-          <Link href="/" className="w-min">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="py-5"
+    >
+      <section>
+        <div className="flex  justify-between items-center">
+          <h1 className="text-5xl font-bold">Todos projetos</h1>
+          <Link href="/projects" className="w-min">
             <span className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-sm">
               <HiArrowNarrowLeft size={18} /> Voltar
             </span>
           </Link>
-          <div>
-            <SectionTitle title="Todos projetos" />
-          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-[repeat(auto-fit,minmax(350px,1fr))] mt-12 gap-6">
@@ -31,6 +30,6 @@ export default function AllProjects() {
           ))}
         </div>
       </section>
-    </main>
+    </motion.div>
   )
 }

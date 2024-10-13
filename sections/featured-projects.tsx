@@ -15,9 +15,9 @@ export default function FeaturedProjects() {
       className="py-5"
     >
       <section>
-        <div className="flex flex-wrap items-end justify-between mb-10 sm:mb-16">
+        <div className="flex flex-wrap items-center justify-between mb-10 sm:mb-16">
           <h1 className="text-5xl font-bold">Melhores projetos</h1>
-          <Link href="/projects" className="mt-6 sm:mb-0 ">
+          <Link href="/projects/all">
             <span className="flex items-center gap-2 text-sm hover:underline hover:underline-offset-4">
               Ver todos <HiArrowNarrowRight size={18} />
             </span>
@@ -29,7 +29,7 @@ export default function FeaturedProjects() {
           ))}
         </div>
         <div className="mt-12 w-max sm:mt-16">
-          <Link href="/projects">
+          <Link href="/projects/all">
             <span className="flex items-center gap-2 text-sm hover:underline hover:underline-offset-4">
               Ver todos <HiArrowNarrowRight size={18} />
             </span>
