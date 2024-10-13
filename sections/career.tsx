@@ -18,7 +18,11 @@ export default function Career({ about }: CareerProps) {
           <div key={item.company} className="flex flex-col gap-2 mt-5">
             <h3 className="text-title">{item.name}</h3>
             <p className="flex items-center gap-2 text-paragraph">
-              <a href="" className="underline underline-offset-4 text-title">
+              <a
+                href={item.href}
+                target="_blank"
+                className="underline underline-offset-4 text-title"
+              >
                 @{item.company}
               </a>
               <span> • </span>
