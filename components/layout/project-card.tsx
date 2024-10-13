@@ -11,7 +11,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="flex flex-col items-center justify-between lg:flex-row gap-6 sm:gap-12 group">
+    <div className="flex flex-col items-center justify-between lg:flex-row gap-6 sm:gap-12 group mt-12">
       <Image
         src={project.img}
         alt={`Imagem do projeto ${project.name}`}
