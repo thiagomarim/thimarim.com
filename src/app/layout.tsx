@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import './globals.css'
 import { cn } from '@/lib/utils'
+import CommandBar from '@/components/common/command-bar'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -21,7 +22,7 @@ export default function RootLayout({
           GeistSans.className,
         )}
       >
-        {children}
+        <CommandBar>{children}</CommandBar>
       </body>
     </html>
   )
