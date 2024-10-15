@@ -3,6 +3,7 @@ import { GeistSans } from 'geist/font/sans'
 import './globals.css'
 import { cn } from '@/lib/utils'
 import CommandBar from '@/components/common/command-bar'
+import Header from '@/components/layout/header'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,14 +17,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body
-        className={cn(
-          'text-primary bg-background antialiased',
-          GeistSans.className,
-        )}
-      >
-        <CommandBar>{children}</CommandBar>
-      </body>
+      <CommandBar>
+        <body
+          className={cn(
+            'text-primary bg-background antialiased',
+            GeistSans.className,
+          )}
+        >
+          <Header />
+          {children}
+        </body>
+      </CommandBar>
     </html>
   )
 }
