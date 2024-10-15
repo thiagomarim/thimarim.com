@@ -15,10 +15,10 @@ const techList = [
 export default function AboutMe() {
   return (
     <section className="items-start">
-      <TitleSection title="Um pouco mais sobre mim" />
-      <div className="flex items-start justify-between gap-20">
-        <div className="bg-terceary min-h-[400px] min-w-[400px] rounded-xl" />
-        <div className="text-secondary flex flex-col gap-4">
+      <TitleSection title="Um pouco mais sobre mim" sizes="lg" />
+      <div className="mt-6 flex items-start justify-between gap-20">
+        <div className="min-h-[400px] min-w-[400px] rounded-xl bg-terceary" />
+        <div className="flex flex-col gap-4 text-secondary">
           <p>
             Olá, eu me chamo Thiago Marim e atuo como Desenvolvedor front-end
             pela Shakers. Atualmente estou cursando Análise e Desenvolvimento de
