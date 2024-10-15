@@ -12,18 +12,19 @@ export default function TitleSection({
   sizes,
 }: TitleSectionProps) {
   return (
-    <div className="mt-14 flex flex-col gap-6">
+    <div className="mt-8 flex flex-col gap-6 sm:mt-14">
       <h1
         className={cn(
           '',
           sizes === 'sm' && 'text-2xl font-semibold',
           sizes === 'md' && 'text-3xl font-semibold',
-          sizes === 'lg' && 'text-[64px] font-bold leading-[72px]',
+          sizes === 'lg' &&
+            'text-[32px] font-bold leading-[2rem] sm:text-[64px] sm:leading-[72px]',
         )}
       >
         {title}
       </h1>
-      <p className="text-base text-secondary">{subtitle}</p>
+      {subtitle && <p className="text-base text-secondary">{subtitle}</p>}
     </div>
   )
 }
