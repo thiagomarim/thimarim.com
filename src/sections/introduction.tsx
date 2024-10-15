@@ -5,8 +5,8 @@ import Link from 'next/link'
 export default function Introduction() {
   return (
     <section className="flex max-w-[1000px] flex-col justify-center gap-5">
-      <h1 className="text-[64px] font-bold leading-[72px]">
-        Olá, eu me chamo Thiago - desenvolvedor front-end.
+      <h1 className="text-[32px] font-bold leading-[46px] md:text-[64px] md:leading-[72px]">
+        Olá, eu me chamo Thiago / desenvolvedor front-end.
       </h1>
       <p className="text-secondary text-base">
         Atualmente trabalho como Desenvolvedor front-end na{' '}

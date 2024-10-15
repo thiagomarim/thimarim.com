@@ -27,7 +27,7 @@ export default function RootLayout({
         >
           <div className="relative z-0 flex min-h-screen flex-col">
             <Header />
-            <main className="container flex flex-1 items-center overflow-hidden">
+            <main className="container flex flex-1 overflow-hidden">
               {children}
             </main>
             <Footer />
