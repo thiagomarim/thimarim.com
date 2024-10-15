@@ -38,7 +38,7 @@ export default function Header() {
                         onMouseEnter={() => setHovered(page)}
                         onMouseLeave={() => setHovered('')}
                         className={cn(
-                          "text-secondary after:bg-primary hover:text-primary inline-block cursor-pointer px-5 py-3 text-xs font-medium uppercase tracking-[1.2px] no-underline transition-colors after:absolute after:left-0 after:right-0 after:top-[18px] after:mx-auto after:h-[1px] after:w-[20px] after:opacity-0 after:content-['']",
+                          "text-secondary after:bg-primary hover:text-primary inline-block cursor-pointer px-5 py-3 text-xs font-medium uppercase tracking-[1.2px] no-underline transition-colors after:absolute after:left-0 after:right-0 after:top-[22px] after:mx-auto after:h-[1px] after:w-[20px] after:opacity-0 after:content-['']",
                           pathname === path &&
                             'text-primary transition-colors after:opacity-100 hover:text-[#f2f2f2]',
                         )}
