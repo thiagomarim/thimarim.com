@@ -4,6 +4,7 @@ import './globals.css'
 import { cn } from '@/lib/utils'
 import CommandBar from '@/components/common/command-bar'
 import Header from '@/components/layout/header'
+import Footer from '@/components/layout/footer'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -24,8 +25,13 @@ export default function RootLayout({
             GeistSans.className,
           )}
         >
-          <Header />
-          {children}
+          <div className="relative z-0 flex min-h-screen flex-col">
+            <Header />
+            <main className="container flex flex-1 items-center overflow-hidden">
+              {children}
+            </main>
+            <Footer />
+          </div>
         </body>
       </CommandBar>
     </html>

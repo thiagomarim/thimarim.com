@@ -1,3 +1,5 @@
+import Introduction from '@/sections/introduction'
+
 export default function Home() {
-  return <main className="container">Introduction</main>
+  return <Introduction />
 }
