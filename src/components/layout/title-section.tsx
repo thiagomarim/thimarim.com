@@ -12,7 +12,7 @@ export default function TitleSection({
   sizes,
 }: TitleSectionProps) {
   return (
-    <div className="mt-8 flex flex-col gap-6 sm:mt-14">
+    <div className="mt-8 flex max-w-[1000px] flex-col gap-6 sm:mt-14">
       <h1
         className={cn(
           '',
