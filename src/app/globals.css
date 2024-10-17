@@ -5,3 +5,8 @@
 .container {
     @apply mx-auto w-full max-w-[1200px] px-6;
 }
+
+::selection {
+    background-color: #E6E6E6;
+    color: #08090A;
+}
