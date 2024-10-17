@@ -18,6 +18,9 @@ const config: Config = {
         buttonText: '#08090A',
         border: '#1C1C1D',
       },
+      screens: {
+        mobile: '460px',
+      },
     },
   },
 }
