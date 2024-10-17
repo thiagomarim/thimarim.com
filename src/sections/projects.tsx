@@ -3,8 +3,9 @@
 import TitleSection from '@/components/layout/title-section'
 import Image from 'next/image'
 import { Badge } from '@/components/ui/badge'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import { ProjectsListProps } from '@/data/projects'
+import Link from 'next/link'
 
 interface ProjectsSectionProps {
   projectList: ProjectsListProps[]
@@ -20,7 +21,7 @@ export default function ProjectsSection({ projectList }: ProjectsSectionProps) {
       />
 
       <TitleSection title="Projetos em destaque" sizes="sm" />
-      <div className="flex flex-col gap-16">
+      <div className="flex flex-col gap-6 sm:gap-16">
         {projectList.slice(0, 4).map((project) => (
           <div
             className="group mt-8 flex flex-wrap items-center justify-between gap-6 sm:gap-12 lg:flex-nowrap lg:gap-24"
@@ -43,7 +44,7 @@ export default function ProjectsSection({ projectList }: ProjectsSectionProps) {
               <div className="flex items-center justify-start gap-2 lg:justify-center">
                 {project.techs.map((tech) => (
                   <Badge
-                    className="bg-terceary font-light text-primary"
+                    className="bg-terceary font-light text-primary hover:bg-terceary/80"
                     key={tech}
                   >
                     {tech}
@@ -72,6 +73,12 @@ export default function ProjectsSection({ projectList }: ProjectsSectionProps) {
           </div>
         ))}
       </div>
+      <Link
+        href={'/projects/all'}
+        className="mt-12 flex items-center gap-2 text-[15px] text-primary hover:text-primary/80 hover:transition-colors"
+      >
+        Ver todos <ArrowRight size={16} />
+      </Link>
     </section>
   )
 }

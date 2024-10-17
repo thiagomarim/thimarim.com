@@ -44,7 +44,7 @@ export const ProjectsList: ProjectsListProps[] = [
     name: 'To Do List',
     desc: 'Uma aplicação de uma Lista de tarefas onde o usuário pode adicionar novas tarefas e excluir quando quiser.',
     img: '/projects/to-do-list.jpg',
-    techs: ['React', 'Vite', 'TypeScript', 'Tailwind CSS', 'Shadcn'],
+    techs: ['React', 'Vite', 'TypeScript', 'Tailwind CSS'],
     repo: 'https://github.com/thiagomarim/to-do-list',
     live: 'https://to-do-list-fawn-beta.vercel.app/',
   },
