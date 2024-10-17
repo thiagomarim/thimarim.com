@@ -20,12 +20,12 @@ import { cn } from '../../lib/utils'
 import Lottie, { LottieRefCurrentProps } from 'lottie-react'
 import { useRouter } from 'next/navigation'
 
-import emailIcon from '@/public/icons/email.json'
-import copyLinkIcon from '@/public/icons/copy-link.json'
-import homeIcon from '@/public/icons/home.json'
-import aboutIcon from '@/public/icons/about.json'
-import projectsIcon from '@/public/icons/projects.json'
-import figIcon from '@/public/icons/fig.json'
+import emailIcon from '../../../public/icons/email.json'
+import copyLinkIcon from '../../../public/icons/copy-link.json'
+import homeIcon from '../../../public/icons/home.json'
+import aboutIcon from '../../../public/icons/about.json'
+import projectsIcon from '../../../public/icons/projects.json'
+import figIcon from '../../../public/icons/fig.json'
 
 export default function CommandBar({ children }: HTMLAttributes<HTMLElement>) {
   const copyLink = () => {
@@ -152,10 +152,10 @@ export default function CommandBar({ children }: HTMLAttributes<HTMLElement>) {
     <KBarProvider actions={actions}>
       <KBarPortal>
         <KBarPositioner className="backgdrop-blur-sm fixed inset-0 box-border flex w-full items-start justify-center bg-black/60 pb-4 pr-4 pt-[14vh]">
-          <KBarAnimator className="bg-terceary text-primary border-terceary w-full max-w-[600px] overflow-hidden rounded-lg rounded-t-lg border-[1px]">
+          <KBarAnimator className="w-full max-w-[600px] overflow-hidden rounded-lg rounded-t-lg border-[1px] border-terceary bg-terceary text-primary">
             <KBarSearch
               placeholder="Escreva um comando or pesquise…"
-              className="text-primary placeholder:text-secondary border-terceary m-0 box-border w-full border-b-[1px] bg-background px-4 py-3 outline-none"
+              className="m-0 box-border w-full border-b-[1px] border-terceary bg-background px-4 py-3 text-primary outline-none placeholder:text-secondary"
             />
             <RenderResults />
           </KBarAnimator>
@@ -246,7 +246,7 @@ const ResultItem = forwardRef<HTMLDivElement, ResultItemProps>(
           <div className="grid grid-flow-col gap-1" aria-hidden>
             {action.shortcut.map((shortcut) => (
               <kbd
-                className="bg-terceary text-paragraph rounded px-2 py-1 uppercase"
+                className="text-paragraph rounded bg-terceary px-2 py-1 uppercase"
                 key={shortcut}
               >
                 {shortcut}
