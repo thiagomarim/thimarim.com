@@ -38,11 +38,14 @@ export default function ProjectsSection({ projectList }: ProjectsSectionProps) {
               <h4 className="text-2xl font-semibold text-primary">
                 {project.name}
               </h4>
-              <span>Projeto pessoal</span>
+
               <p>{project.desc}</p>
-              <div className="flex items-center justify-start gap-4 lg:justify-center">
+              <div className="flex items-center justify-start gap-2 lg:justify-center">
                 {project.techs.map((tech) => (
-                  <Badge className="text-background" key={tech}>
+                  <Badge
+                    className="bg-terceary font-light text-primary"
+                    key={tech}
+                  >
                     {tech}
                   </Badge>
                 ))}
