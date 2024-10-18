@@ -2,6 +2,7 @@ import TitleSection from '@/components/layout/title-section'
 import Image from 'next/image'
 import { StackListProps } from '@/data/stack'
 import { cn } from '@/lib/utils'
+import AnimatedSection from '@/components/common/animated-section'
 
 interface StackSectionProps {
   stackList: StackListProps[]
@@ -9,7 +10,7 @@ interface StackSectionProps {
 
 export default function StackSection({ stackList }: StackSectionProps) {
   return (
-    <section>
+    <AnimatedSection>
       <TitleSection
         title="Minhas Stacks"
         sizes="lg"
@@ -19,7 +20,7 @@ export default function StackSection({ stackList }: StackSectionProps) {
       {stackList.map(({ items, title }) => (
         <div key={title}>
           <TitleSection title={title} sizes="sm" />
-          <div className="mobile:grid-cols-2 mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+          <div className="mt-4 grid grid-cols-1 gap-3 mobile:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
             {items.map((item) => (
               <div
                 className="flex flex-col items-center gap-3 rounded-lg border border-border p-6"
@@ -54,6 +55,6 @@ export default function StackSection({ stackList }: StackSectionProps) {
           </div>
         </div>
       ))}
-    </section>
+    </AnimatedSection>
   )
 }

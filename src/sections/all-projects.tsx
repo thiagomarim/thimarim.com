@@ -1,3 +1,4 @@
+import AnimatedSection from '@/components/common/animated-section'
 import AllProjectsCard from '@/components/layout/all-project-card'
 import TitleSection from '@/components/layout/title-section'
 import {
@@ -12,7 +13,7 @@ import { ProjectsList } from '@/data/projects'
 
 export default function AllProjectsSection() {
   return (
-    <section>
+    <AnimatedSection>
       <div className="flex flex-col gap-2">
         <div>
           <TitleSection
@@ -56,6 +57,6 @@ export default function AllProjectsSection() {
           <AllProjectsCard key={project.name} project={project} />
         ))}
       </div>
-    </section>
+    </AnimatedSection>
   )
 }

@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import { ProjectsListProps } from '@/data/projects'
 import Link from 'next/link'
+import AnimatedSection from '@/components/common/animated-section'
 
 interface ProjectsSectionProps {
   projectList: ProjectsListProps[]
@@ -13,7 +14,7 @@ interface ProjectsSectionProps {
 
 export default function ProjectsSection({ projectList }: ProjectsSectionProps) {
   return (
-    <section>
+    <AnimatedSection>
       <TitleSection
         title="Aqui estao os meus melhores projetos já desenvolvidos."
         sizes="lg"
@@ -80,6 +81,6 @@ export default function ProjectsSection({ projectList }: ProjectsSectionProps) {
       >
         Ver todos <ArrowRight size={16} />
       </Link>
-    </section>
+    </AnimatedSection>
   )
 }

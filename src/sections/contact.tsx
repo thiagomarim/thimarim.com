@@ -1,9 +1,10 @@
+import AnimatedSection from '@/components/common/animated-section'
 import ContactForm from '@/components/common/contact-form'
 import TitleSection from '@/components/layout/title-section'
 
 export default function ContactSection() {
   return (
-    <section>
+    <AnimatedSection>
       <TitleSection
         title="Me mande um email."
         sizes="lg"
@@ -12,6 +13,6 @@ export default function ContactSection() {
       <div className="mt-12">
         <ContactForm />
       </div>
-    </section>
+    </AnimatedSection>
   )
 }

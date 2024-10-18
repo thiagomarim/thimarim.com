@@ -1,14 +1,15 @@
+import AnimatedSection from '@/components/common/animated-section'
 import { Button } from '@/components/ui/button'
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 
 export default function Introduction() {
   return (
-    <section className="flex max-w-[1000px] flex-col justify-center gap-5">
+    <AnimatedSection className="flex max-w-[1000px] flex-col justify-center gap-5">
       <h1 className="text-[32px] font-bold leading-[46px] md:text-[64px] md:leading-[72px]">
         Olá, eu me chamo Thiago / desenvolvedor front-end.
       </h1>
-      <p className="text-secondary text-base">
+      <p className="text-base text-secondary">
         Atualmente trabalho como Desenvolvedor front-end na{' '}
         <a
           href="https://shakersagencia.com.br/"
@@ -44,6 +45,6 @@ export default function Introduction() {
           </a>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   )
 }

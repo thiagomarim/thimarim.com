@@ -21,7 +21,7 @@ export default function RootLayout({
       <CommandBar>
         <body
           className={cn(
-            'text-primary bg-background antialiased',
+            'bg-background text-primary antialiased',
             GeistSans.className,
           )}
         >
