@@ -1,5 +1,6 @@
 'use client'
 
+import React, { useState } from 'react'
 import { Mail } from 'lucide-react'
 import { Button } from '../ui/button'
 import { useForm } from 'react-hook-form'
@@ -15,22 +16,53 @@ const contactFormSchema = z.object({
 type ContactFormData = z.infer<typeof contactFormSchema>
 
 export default function ContactForm() {
+  const [submitError, setSubmitError] = useState<string | null>(null)
+  const [submitSuccess, setSubmitSuccess] = useState(false)
+
   const {
     handleSubmit,
     register,
-    formState: { errors },
+    formState: { errors, isSubmitting },
+    reset,
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
   })
 
-  function onSubimit(data: ContactFormData) {
-    console.log(data)
+  async function onSubmit(data: ContactFormData) {
+    setSubmitError(null)
+    setSubmitSuccess(false)
+
+    try {
+      const response = await fetch('api/mail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+
+      if (response.ok) {
+        const result = await response.json()
+        if (result.success) {
+          setSubmitSuccess(true)
+          reset() // Limpa o formulário após envio bem-sucedido
+        } else {
+          throw new Error(result.error || 'Falha ao enviar a mensagem')
+        }
+      } else {
+        throw new Error('Falha na requisição')
+      }
+    } catch (error) {
+      setSubmitError(
+        error instanceof Error ? error.message : 'Erro desconhecido',
+      )
+    }
   }
 
   return (
     <form
       className="flex w-full flex-col gap-6"
-      onSubmit={handleSubmit(onSubimit)}
+      onSubmit={handleSubmit(onSubmit)}
     >
       <div className="flex flex-col gap-2">
         <label htmlFor="name">Nome</label>
@@ -72,10 +104,20 @@ export default function ContactForm() {
       <Button
         className="flex max-w-min items-center gap-2 text-black"
         size={'lg'}
+        type="submit"
+        disabled={isSubmitting}
       >
         <Mail size={16} />
-        Enviar Email
+        {isSubmitting ? 'Enviando...' : 'Enviar Email'}
       </Button>
+      {submitSuccess && (
+        <span className="mt-2 text-green-500">
+          Mensagem enviada com sucesso!
+        </span>
+      )}
+      {submitError && (
+        <span className="mt-2 text-red-500">Erro: {submitError}</span>
+      )}
     </form>
   )
 }
