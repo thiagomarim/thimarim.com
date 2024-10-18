@@ -6,6 +6,15 @@
     @apply mx-auto w-full max-w-[1200px] px-6;
 }
 
+::-webkit-scrollbar {
+  width: 0.4rem;
+  background: #08090A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #08090A;
+}
+
 ::selection {
     background-color: #E6E6E6;
     color: #08090A;

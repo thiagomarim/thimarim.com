@@ -8,7 +8,24 @@ import { AlignJustify, Command, X } from 'lucide-react'
 import { useKBar } from 'kbar'
 import { useEffect, useState } from 'react'
 
-const pages = ['About', 'Projects', 'Stack', 'Contact']
+const pages = [
+  {
+    name: 'Sobre mim',
+    href: '/about',
+  },
+  {
+    name: 'Projetos',
+    href: '/projects',
+  },
+  {
+    name: 'Tecnologias',
+    href: '/stack',
+  },
+  {
+    name: 'Contato',
+    href: '/contact',
+  },
+]
 
 export default function Header() {
   const [hovered, setHovered] = useState<string>('')
@@ -52,19 +69,18 @@ export default function Header() {
           <nav className="lg: hidden w-full items-center justify-center md:flex">
             <ul className="relative flex list-none items-center">
               {pages.map((page) => {
-                const path = `/${page.toLowerCase()}`
-                const isHovered = hovered === page
+                const isHovered = hovered === page.href
 
                 return (
-                  <li key={page}>
-                    <Link href={path} passHref legacyBehavior>
+                  <li key={page.name}>
+                    <Link href={page.href} passHref legacyBehavior>
                       <a className="relative border-0 hover:opacity-100 focus:opacity-100">
                         <motion.span
-                          onMouseEnter={() => setHovered(page)}
+                          onMouseEnter={() => setHovered(page.href)}
                           onMouseLeave={() => setHovered('')}
                           className={cn(
                             "inline-block cursor-pointer px-5 py-3 text-xs font-medium uppercase tracking-[1.2px] text-secondary no-underline transition-colors after:absolute after:left-0 after:right-0 after:top-[22px] after:mx-auto after:h-[1px] after:w-[20px] after:bg-primary after:opacity-0 after:content-[''] hover:text-primary",
-                            pathname === path &&
+                            pathname === page.href &&
                               'text-primary transition-colors after:opacity-100 hover:text-[#f2f2f2]',
                           )}
                         >
@@ -78,7 +94,7 @@ export default function Header() {
                               className="absolute -top-[10px] left-0 right-0 z-[-1] rounded-lg bg-terceary p-5"
                             />
                           )}
-                          {page}
+                          {page.name}
                         </motion.span>
                       </a>
                     </Link>
@@ -99,14 +115,14 @@ export default function Header() {
             <nav className="fixed left-0 right-0 top-14 z-50 flex flex-col items-center justify-center gap-4 border-b-[1px] border-border bg-background p-4 text-center">
               {pages.map((page) => (
                 <Link
-                  href={page.toLowerCase()}
-                  key={page}
+                  href={page.href}
+                  key={page.name}
                   className={cn(
                     'text-sm font-medium uppercase text-secondary hover:text-primary hover:transition-colors',
-                    pathname === page.toLowerCase() && 'text-red-500',
+                    pathname === page.href && 'text-red-500',
                   )}
                 >
-                  {page}
+                  {page.name}
                 </Link>
               ))}
 
