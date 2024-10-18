@@ -26,6 +26,7 @@ export default function ProjectsSection({ projectList }: ProjectsSectionProps) {
           <div
             className="group mt-8 flex flex-wrap items-center justify-between gap-6 sm:gap-12 lg:flex-nowrap lg:gap-24"
             key={project.name}
+            id="project"
           >
             <Image
               src={project.img}
@@ -33,7 +34,7 @@ export default function ProjectsSection({ projectList }: ProjectsSectionProps) {
               width={1920}
               height={1080}
               priority
-              className="max-w-full rounded-xl group-even:order-none lg:max-w-[620px] lg:group-even:order-last"
+              className="aspect-video max-w-full rounded-xl shadow-2xl shadow-primary/10 group-even:order-none max-lg:!transform-none lg:max-w-[620px] lg:group-even:order-last"
             />
             <div className="flex max-w-full flex-col justify-start gap-4 text-start text-secondary lg:max-w-[460px] lg:justify-center lg:text-center">
               <h4 className="text-2xl font-semibold text-primary">

@@ -19,7 +19,7 @@ export const EmailTemplate: React.FC<EmailTemplateProps> = ({
         <Text style={paragraph}>
           Olá, Thiago. Temos uma nova mensagem para você!
         </Text>
-        <Text style={paragraph}>Nome: {name},</Text>
+        <Text style={paragraph}>Nome: {name}</Text>
         <Text style={paragraph}>Email: {email}</Text>
         <Text style={paragraph}>Mensagem: {message}</Text>
         <Hr style={hr} />

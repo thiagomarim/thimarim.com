@@ -10,3 +10,21 @@
     background-color: #E6E6E6;
     color: #08090A;
 }
+
+#project:nth-child(even) > img {
+    transform: perspective(1000px) rotateY(-13deg) rotateX(5deg) rotate(1deg)
+      scaleY(0.9) scaleX(0.95) translate(-3%) translateY(-3%);
+  }
+
+  #project:nth-child(odd) > img {
+    transform: perspective(1000px) rotateY(13deg) rotateX(5deg) rotate(1deg)
+      scaleY(0.9) scaleX(0.95) translate(3%) translateY(-3%);
+  }
+
+  #project > img {
+    transition: transform 0.4s ease !important;
+  }
+
+  #project > img:hover {
+    transform: none;
+  }
