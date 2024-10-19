@@ -3,11 +3,15 @@ import { Button } from '@/components/ui/button'
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 
+import { useTranslations } from 'next-intl'
+
 export default function Introduction() {
+  const t = useTranslations('HomePage')
+
   return (
     <AnimatedSection className="flex max-w-[1000px] flex-col justify-center gap-5">
       <h1 className="text-[32px] font-bold leading-[46px] md:text-[64px] md:leading-[72px]">
-        Olá, eu me chamo Thiago / desenvolvedor front-end.
+        {t('title')}
       </h1>
       <p className="text-base text-secondary">
         Atualmente trabalho como Desenvolvedor front-end na{' '}

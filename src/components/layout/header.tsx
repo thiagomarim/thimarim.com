@@ -1,12 +1,13 @@
 'use client'
 
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { AnimatePresence, motion } from 'framer-motion'
 import { AlignJustify, Command, X } from 'lucide-react'
 import { useKBar } from 'kbar'
 import { useEffect, useState } from 'react'
+import LanguageToggle from '../common/language-toggle'
 
 const pages = [
   {
@@ -73,30 +74,31 @@ export default function Header() {
 
                 return (
                   <li key={page.name}>
-                    <Link href={page.href} passHref legacyBehavior>
-                      <a className="relative border-0 hover:opacity-100 focus:opacity-100">
-                        <motion.span
-                          onMouseEnter={() => setHovered(page.href)}
-                          onMouseLeave={() => setHovered('')}
-                          className={cn(
-                            "inline-block cursor-pointer px-5 py-3 text-xs font-medium uppercase tracking-[1.2px] text-secondary no-underline transition-colors after:absolute after:left-0 after:right-0 after:top-[22px] after:mx-auto after:h-[1px] after:w-[20px] after:bg-primary after:opacity-0 after:content-[''] hover:text-primary",
-                            pathname === page.href &&
-                              'text-primary transition-colors after:opacity-100 hover:text-[#f2f2f2]',
-                          )}
-                        >
-                          {isHovered && (
-                            <motion.span
-                              layoutId="nav"
-                              transition={{ type: 'tween', duration: 0.4 }}
-                              initial={{ opacity: 0 }}
-                              animate={{ opacity: 1 }}
-                              exit={{ opacity: 0 }}
-                              className="absolute -top-[10px] left-0 right-0 z-[-1] rounded-lg bg-terceary p-5"
-                            />
-                          )}
-                          {page.name}
-                        </motion.span>
-                      </a>
+                    <Link
+                      href={page.href}
+                      className="relative border-0 hover:opacity-100 focus:opacity-100"
+                      onMouseEnter={() => setHovered(page.href)}
+                      onMouseLeave={() => setHovered('')}
+                    >
+                      <motion.span
+                        className={cn(
+                          "inline-block cursor-pointer px-5 py-3 text-xs font-medium uppercase tracking-[1.2px] text-secondary no-underline transition-colors after:absolute after:left-0 after:right-0 after:top-[22px] after:mx-auto after:h-[1px] after:w-[20px] after:bg-primary after:opacity-0 after:content-[''] hover:text-primary",
+                          pathname === page.href &&
+                            'text-primary transition-colors after:opacity-100 hover:text-[#f2f2f2]',
+                        )}
+                      >
+                        {isHovered && (
+                          <motion.span
+                            layoutId="nav"
+                            transition={{ type: 'tween', duration: 0.4 }}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="absolute -top-[10px] left-0 right-0 z-[-1] rounded-lg bg-terceary p-5"
+                          />
+                        )}
+                        {page.name}
+                      </motion.span>
                     </Link>
                   </li>
                 )
@@ -141,7 +143,8 @@ export default function Header() {
             </nav>
           )}
 
-          <aside className="hidden h-[34px] md:block">
+          <aside className="hidden items-center gap-2 md:flex">
+            <LanguageToggle />
             <button
               className="h-[34px] cursor-pointer rounded-lg border border-border px-2 text-primary hover:bg-terceary hover:transition-colors"
               type="button"
