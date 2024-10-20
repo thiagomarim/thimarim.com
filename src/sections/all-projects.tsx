@@ -10,6 +10,7 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
 import { ProjectsList } from '@/data/projects'
+import { Link } from '@/i18n/routing'
 import { useTranslations } from 'next-intl'
 
 export default function AllProjectsSection() {
@@ -29,21 +30,21 @@ export default function AllProjectsSection() {
         <Breadcrumb className="mt-8 text-secondary">
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink
+              <Link
                 href="/"
                 className="hover:text-primary hover:transition-colors"
               >
                 {t('breadcrumb.home')}
-              </BreadcrumbLink>
+              </Link>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink
+              <Link
                 href="/projects"
                 className="hover:text-primary hover:transition-colors"
               >
                 {t('breadcrumb.projects')}
-              </BreadcrumbLink>
+              </Link>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
