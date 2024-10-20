@@ -1,18 +1,21 @@
 import CardCareer from '@/components/layout/career-card'
 import TitleSection from '@/components/layout/title-section'
 import { CareerListProps } from '@/data/career'
+import { useTranslations } from 'next-intl'
 
 interface CareerProps {
   careerInfo: CareerListProps[]
 }
 
 export default function Career({ careerInfo }: CareerProps) {
+  const t = useTranslations('pages.about')
+
   return (
     <section>
-      <TitleSection title="Carreira" sizes="sm" />
+      <TitleSection title={t('career.title')} sizes="sm" />
       <div className="mt-5 grid grid-cols-1 gap-10 sm:grid-cols-2">
         {careerInfo.map((career) => (
-          <CardCareer career={career} key={career.jobTitle} />
+          <CardCareer career={career} key={career.company} />
         ))}
       </div>
     </section>

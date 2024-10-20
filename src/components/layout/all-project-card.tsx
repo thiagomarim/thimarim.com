@@ -3,12 +3,20 @@ import { ProjectsListProps } from '@/data/projects'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { ArrowUpRight } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 
 interface AllProjectsCardProps {
   project: ProjectsListProps
 }
 
-export default function AllProjectsCard({ project }: AllProjectsCardProps) {
+export default async function AllProjectsCard({
+  project,
+}: AllProjectsCardProps) {
+  const description = (await getTranslations('config.projects'))(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    `${project.id}.description` as any,
+  )
+
   return (
     <div className="rounded-lg border border-border bg-background">
       <div className="flex flex-col gap-4 px-4 py-3" key={project.name}>
@@ -23,7 +31,7 @@ export default function AllProjectsCard({ project }: AllProjectsCardProps) {
         <div className="flex flex-col gap-3">
           <h3 className="font-medium text-gray-50">{project.name}</h3>
           <p className="line-clamp-3 text-sm leading-6 text-secondary">
-            {project.desc}
+            {description}
           </p>
 
           <div className="flex flex-wrap items-center gap-2">
@@ -45,7 +53,7 @@ export default function AllProjectsCard({ project }: AllProjectsCardProps) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Visitar projeto <ArrowUpRight size={16} />
+                Visit project <ArrowUpRight size={16} />
               </a>
             </Button>
             <Button variant={'link'} size={'sm'}>
@@ -55,7 +63,7 @@ export default function AllProjectsCard({ project }: AllProjectsCardProps) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Ver código <ArrowUpRight size={16} />
+                View code <ArrowUpRight size={16} />
               </a>
             </Button>
           </div>

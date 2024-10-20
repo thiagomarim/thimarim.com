@@ -8,30 +8,33 @@ import { AlignJustify, Command, X } from 'lucide-react'
 import { useKBar } from 'kbar'
 import { useEffect, useState } from 'react'
 import LanguageToggle from '../common/language-toggle'
-
-const pages = [
-  {
-    name: 'Sobre mim',
-    href: '/about',
-  },
-  {
-    name: 'Projetos',
-    href: '/projects',
-  },
-  {
-    name: 'Tecnologias',
-    href: '/stack',
-  },
-  {
-    name: 'Contato',
-    href: '/contact',
-  },
-]
+import { useTranslations } from 'next-intl'
 
 export default function Header() {
   const [hovered, setHovered] = useState<string>('')
   const [showMobile, setShowMobile] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+
+  const t = useTranslations('navItems')
+
+  const pages = [
+    {
+      name: `${t('about')}`,
+      href: '/about',
+    },
+    {
+      name: `${t('projects')}`,
+      href: '/projects',
+    },
+    {
+      name: `${t('stack')}`,
+      href: '/stack',
+    },
+    {
+      name: `${t('contact')}`,
+      href: '/contact',
+    },
+  ]
 
   const { query } = useKBar()
   const pathname = usePathname()

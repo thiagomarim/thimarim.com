@@ -9,7 +9,7 @@ export type StackListProps = {
 
 export const StackList: StackListProps[] = [
   {
-    title: 'Front-end',
+    title: 'frontend',
     items: [
       {
         name: 'HTML',
@@ -59,7 +59,7 @@ export const StackList: StackListProps[] = [
     ],
   },
   {
-    title: 'Design',
+    title: 'design',
     items: [
       {
         name: 'Photoshop',
@@ -76,7 +76,7 @@ export const StackList: StackListProps[] = [
     ],
   },
   {
-    title: 'Controle de versão',
+    title: 'version-control',
     items: [
       {
         name: 'Git',

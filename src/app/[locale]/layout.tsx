@@ -32,15 +32,15 @@ export default async function RootLayout({
             GeistSans.className,
           )}
         >
-          <div className="relative z-0 flex min-h-screen flex-col">
-            <Header />
-            <main className="container flex flex-1 overflow-hidden">
-              <NextIntlClientProvider messages={messages}>
+          <NextIntlClientProvider messages={messages}>
+            <div className="relative z-0 flex min-h-screen flex-col">
+              <Header />
+              <main className="container flex flex-1 overflow-hidden">
                 {children}
-              </NextIntlClientProvider>
-            </main>
-            <Footer />
-          </div>
+              </main>
+              <Footer />
+            </div>
+          </NextIntlClientProvider>
         </body>
       </CommandBar>
     </html>

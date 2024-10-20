@@ -1,21 +1,40 @@
 import { CareerListProps } from '@/data/career'
-import { getRelativeTimeString } from '../../../utils/get-relative-time'
+import { getRelativeTimeString } from '../../utils/get-relative-time'
+import { getTranslations } from 'next-intl/server'
 
 interface CareerCardProps {
   career: CareerListProps
 }
 
-export default function CareerCard({ career }: CareerCardProps) {
+export default async function CareerCard({ career }: CareerCardProps) {
   const relativeTime = getRelativeTimeString(
     new Date(career.startDate),
-    'pt-BR',
+    `en`,
   ).replace('há ', '')
+
+  const role = (await getTranslations('config.career'))(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    `${career.id}.role` as any,
+  )
+
+  const location = (await getTranslations('config.career'))(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    `${career.id}.location` as any,
+  )
+
+  const monthYear = (await getTranslations('config.career'))(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    `${career.id}.monthYear` as any,
+  )
+
+  const endDate = (await getTranslations('config.career'))(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    `${career.id}.endDate` as any,
+  )
 
   return (
     <div className="flex flex-col gap-2">
-      <span className="text-lg font-semibold text-primary">
-        {career.jobTitle}
-      </span>
+      <span className="text-lg font-semibold text-primary">{role}</span>
       <div className="flex items-center gap-2 text-secondary">
         <span>
           <a
@@ -28,12 +47,12 @@ export default function CareerCard({ career }: CareerCardProps) {
           </a>
         </span>
         <span> • </span>
-        <span>{career.location}</span>
+        <span>{location}</span>
       </div>
       <div className="flex items-center gap-2 text-secondary">
-        <span>{career.monthYear}</span>
+        <span>{monthYear}</span>
         <span> - </span>
-        <span> {career.endDate} </span>
+        <span> {endDate} </span>
         <span> • </span>
         <span>{relativeTime}</span>
       </div>

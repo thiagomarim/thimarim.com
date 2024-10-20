@@ -1,6 +1,91 @@
 {
-    "HomePage": {
-      "title": "Olá mundo!",
-      "about": "Go to the about page"
+  "pages": {
+    "home": {
+      "introduction": {
+        "title": "Olá, eu me chamo Thiago / desenvolvedor front-end.",
+        "description": "Atualmente trabalho como Desenvolvedor front-end na Shakers. Sou totalmente apaixonado por tecnologia e sempre estou em busca de aprender coisas novas. Atualmente estou localizado em Sao Paulo, Brasil.",
+        "link": "Ver mais sobre mim"
+      }
+    },
+    "about": {
+      "aboutMe": {
+        "title": "Um pouco mais sobre mim.",
+        "firstParagraph": "Olá! Me chamo Thiago Soares Marim, tenho 19 anos e sou desenvolvedor front-end na Shakers Agência & Consultoria. Estou cursando Análise e Desenvolvimento de Sistemas na Universidade Nove de Julho (UNINOVE). Minha grande paixão é transformar ideias em sites dinâmicos, visualmente atraentes e, acima de tudo, centrados na melhor experiência para o usuário.",
+        "secondParagraph": "Meu trabalho é focado em criar interfaces que sejam tanto bonitas quanto intuitivas, garantindo que cada detalhe contribua para uma navegação fluida e agradável. Tenho um conhecimento sólido em diversas tecnologias essenciais para o desenvolvimento front-end, como HTML, CSS, JavaScript, Git, Github e TypeScript. Além disso, utilizo ferramentas como Tailwind CSS, React e Next.js para criar aplicações modernas e de alta performance.",
+        "thirdParagraph": "Seja através da criação de um design responsivo ou da implementação de uma funcionalidade que faz a diferença, meu objetivo é sempre entregar o melhor para os usuários e clientes, aliando estética, funcionalidade e desempenho em cada projeto."
+      },
+      "career": {
+        "title": "Carreira"
+      }
+    },
+    "projects": {
+      "intro": {
+        "title": "Aqui estao os meus melhores projetos já desenvolvidos.",
+        "description": "Conheça alguns dos meus melhores projetos desenvolvidos, que refletem meu compromisso com a criação de soluções eficientes e inovadoras. Cada projeto foi construído com atenção aos detalhes, utilizando as mais modernas tecnologias e práticas de desenvolvimento, com o objetivo de entregar a melhor experiência para os usuários."
+      },
+      "featured": {
+        "title": "Projetos em destaque"
+      }
+    },
+    "allProjects": {
+      "title": "Todos projetos",
+      "description": "Nesta seção, você encontrará uma seleção dos projetos nos quais trabalhei, abrangendo desde aplicações web interativas até soluções de desenvolvimento mais complexas. Cada projeto reflete meu compromisso em criar experiências digitais de qualidade e minha habilidade em transformar ideias em realidade através de tecnologias como HTML, CSS, JavaScript, TypeScript, React, Next.js e muito mais. Explore cada um deles para conhecer melhor meu processo de desenvolvimento e os resultados que posso oferecer.",
+      "breadcrumb": {
+        "home": "Home",
+        "projects": "Projetos",
+        "allProjects": "Todos projetos"
+      }
+    },
+    "stack": {
+      "title": "Tecnologias",
+      "description": "Esta seção reúne as principais tecnologias e ferramentas que utilizo no desenvolvimento de soluções web. Estou sempre em busca de novas práticas e inovações para entregar aplicações eficientes e escaláveis. Cada tecnologia da minha stack foi escolhida para garantir que os projetos tenham desempenho, flexibilidade e uma experiência de usuário impecável.",
+      "categories": {
+        "frontend": "Front-end",
+        "design": "Design",
+        "version-control": "Controle de versão"
+      }
+    },
+    "contact": {
+      "title": "Me mande um email.",
+      "description": "Se você gostou do meu portfólio ou deseja saber mais sobre o meu trabalho, sinta-se à vontade para me enviar uma mensagem. Estou sempre aberto a novas oportunidades, parcerias e ideias. Será um prazer conversar com você!",
+      "buttonText": "Enviar email",
+      "buttonSendingText": "Enviando..."
     }
-  }
+  },
+  "navItems": {
+    "about": "Sobre mim",
+    "projects": "Projetos",
+    "stack": "Tecnologias",
+    "contact": "Contato"
+  },
+  "config": {
+    "career": {
+      "shakers": {
+        "role": "Desenvolvedor Front-end",
+        "location": "Remoto",
+        "monthYear": "set 2024",
+        "endDate": "Atual"
+      }
+    },
+    "projects": {
+      "dogs": {
+        "description": "Uma rede social para cachorros e amigos. O projeto possui sistemas de login, contendo abas de “registrar” e “esqueci minha senha”, além disso o projeto também possui um sistema de perfil, assim podendo visualizar seus posts e ver informações sobre ele."
+      },
+      "fintech": {
+        "description": "O projeto é uma dashboard que contém diversas informações das vendas de sua empresa, contendo um resumo com o total de vendas feita durante uma data selecionada, um gráfico comparando as vendas anteriores, e por fim uma lista com informações de todos os pagamentos."
+      },
+      "interior-decor": {
+        "description": "Uma landing page de uma empresa fictícia voltada para designers de interiores, contendo todas informações da empresa, alguns exemplos de interiores feitos e muito mais!"
+      },
+      "expert-notes": {
+        "description": "Um aplicativo de notas, nele você pode adicionar uma nota escrevendo manualmente ou utilizando a gravação de voz do próprio navegador, contendo a funcionalidade de adicionar nota, apagar e pesquisar."
+      },
+      "to-do-list": {
+        "description": "Uma aplicação de uma Lista de tarefas onde o usuário pode adicionar novas tarefas e excluir quando quiser."
+      },
+      "todo-list": {
+        "description": "Uma aplicação de uma Lista de tarefas onde o usuário pode adicionar novas tarefas, marcar como concluídas e excluir quando quiser."
+      }
+    }  
+  } 
+}

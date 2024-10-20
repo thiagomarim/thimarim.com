@@ -1,25 +1,24 @@
 import TitleSection from '@/components/layout/title-section'
-import Image from 'next/image'
 import { StackListProps } from '@/data/stack'
-import { cn } from '@/lib/utils'
 import AnimatedSection from '@/components/common/animated-section'
+import { useTranslations } from 'next-intl'
+import { cn } from '@/lib/utils'
+import Image from 'next/image'
 
 interface StackSectionProps {
   stackList: StackListProps[]
 }
 
 export default function StackSection({ stackList }: StackSectionProps) {
+  const t = useTranslations('pages.stack')
+
   return (
     <AnimatedSection>
-      <TitleSection
-        title="Minhas Stacks"
-        sizes="lg"
-        subtitle="Esta seção reúne as principais tecnologias e ferramentas que utilizo no desenvolvimento de soluções web. Estou sempre em busca de novas práticas e inovações para entregar aplicações eficientes e escaláveis. Cada tecnologia da minha stack foi escolhida para garantir que os projetos tenham desempenho, flexibilidade e uma experiência de usuário impecável."
-      />
+      <TitleSection title={t('title')} sizes="lg" subtitle={t('description')} />
 
       {stackList.map(({ items, title }) => (
         <div key={title}>
-          <TitleSection title={title} sizes="sm" />
+          <TitleSection title={t(`categories.${title}`)} sizes="sm" />
           <div className="mt-4 grid grid-cols-1 gap-3 mobile:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
             {items.map((item) => (
               <div

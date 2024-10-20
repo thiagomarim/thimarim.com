@@ -1,34 +1,24 @@
 import AnimatedSection from '@/components/common/animated-section'
 import { Button } from '@/components/ui/button'
+import { Link } from '@/i18n/routing'
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'
-import Link from 'next/link'
 
 import { useTranslations } from 'next-intl'
 
 export default function Introduction() {
-  const t = useTranslations('HomePage')
+  const t = useTranslations('pages.home')
 
   return (
     <AnimatedSection className="flex max-w-[1000px] flex-col justify-center gap-5">
       <h1 className="text-[32px] font-bold leading-[46px] md:text-[64px] md:leading-[72px]">
-        {t('title')}
+        {t('introduction.title')}
       </h1>
       <p className="text-base text-secondary">
-        Atualmente trabalho como Desenvolvedor front-end na{' '}
-        <a
-          href="https://shakersagencia.com.br/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-primary hover:text-primary/80 hover:transition-colors"
-        >
-          Shakers
-        </a>
-        . Sou totalmente apaixonado por tecnologia e sempre estou em busca de
-        aprender coisas novas. Atualmente estou localizado em Sao Paulo, Brasil.
+        {t('introduction.description')}
       </p>
       <div className="flex items-center gap-6">
-        <Link href="about">
-          <Button className="w-min text-black">Ver mais sobre mim</Button>
+        <Link href="/about">
+          <Button className="w-min text-black">{t('introduction.link')}</Button>
         </Link>
         <div className="flex items-center gap-4">
           <a

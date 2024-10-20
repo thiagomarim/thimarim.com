@@ -10,16 +10,19 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
 import { ProjectsList } from '@/data/projects'
+import { useTranslations } from 'next-intl'
 
 export default function AllProjectsSection() {
+  const t = useTranslations('pages.allProjects')
+
   return (
     <AnimatedSection>
       <div className="flex flex-col gap-2">
         <div>
           <TitleSection
-            title="Todos projetos"
+            title={t('title')}
             sizes="lg"
-            subtitle="Nesta seção, você encontrará uma seleção dos projetos nos quais trabalhei, abrangendo desde aplicações web interativas até soluções de desenvolvimento mais complexas. Cada projeto reflete meu compromisso em criar experiências digitais de qualidade e minha habilidade em transformar ideias em realidade através de tecnologias como HTML, CSS, JavaScript, TypeScript, React, Next.js e muito mais. Explore cada um deles para conhecer melhor meu processo de desenvolvimento e os resultados que posso oferecer."
+            subtitle={t('description')}
           />
         </div>
 
@@ -30,7 +33,7 @@ export default function AllProjectsSection() {
                 href="/"
                 className="hover:text-primary hover:transition-colors"
               >
-                Home
+                {t('breadcrumb.home')}
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
@@ -39,13 +42,13 @@ export default function AllProjectsSection() {
                 href="/projects"
                 className="hover:text-primary hover:transition-colors"
               >
-                Projetos
+                {t('breadcrumb.projects')}
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
               <BreadcrumbPage className="text-primary">
-                Todos Projetos
+                {t('breadcrumb.allProjects')}
               </BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>

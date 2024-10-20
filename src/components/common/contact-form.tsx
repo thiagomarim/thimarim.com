@@ -6,6 +6,7 @@ import { Button } from '../ui/button'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useTranslations } from 'next-intl'
 
 const contactFormSchema = z.object({
   name: z.string().min(2, 'Insira um nome válido'),
@@ -18,6 +19,8 @@ type ContactFormData = z.infer<typeof contactFormSchema>
 export default function ContactForm() {
   const [submitError, setSubmitError] = useState<string | null>(null)
   const [submitSuccess, setSubmitSuccess] = useState(false)
+
+  const t = useTranslations('pages.contact')
 
   const {
     handleSubmit,
@@ -108,7 +111,7 @@ export default function ContactForm() {
         disabled={isSubmitting}
       >
         <Mail size={16} />
-        {isSubmitting ? 'Enviando...' : 'Enviar Email'}
+        {isSubmitting ? t('buttonSendingText') : t('buttonText')}
       </Button>
       {submitSuccess && (
         <span className="mt-2 text-green-500">

@@ -1,15 +1,14 @@
 import AnimatedSection from '@/components/common/animated-section'
 import ContactForm from '@/components/common/contact-form'
 import TitleSection from '@/components/layout/title-section'
+import { useTranslations } from 'next-intl'
 
 export default function ContactSection() {
+  const t = useTranslations('pages.contact')
+
   return (
     <AnimatedSection>
-      <TitleSection
-        title="Me mande um email."
-        sizes="lg"
-        subtitle="Se você gostou do meu portfólio ou deseja saber mais sobre o meu trabalho, sinta-se à vontade para me enviar uma mensagem. Estou sempre aberto a novas oportunidades, parcerias e ideias. Será um prazer conversar com você!"
-      />
+      <TitleSection title={t('title')} sizes="lg" subtitle={t('description')} />
       <div className="mt-12">
         <ContactForm />
       </div>
