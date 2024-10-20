@@ -9,9 +9,11 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useTranslations } from 'next-intl'
 
 const contactFormSchema = z.object({
-  name: z.string().min(2, 'Insira um nome válido'),
-  email: z.string().email('Insira um email válido'),
-  message: z.string().min(5, 'A mensagem deve conter mais de 5 caracteres'),
+  name: z.string().min(2, 'Please input a valid name.'),
+  email: z.string().email('Please input a valid email.'),
+  message: z
+    .string()
+    .min(5, 'The message must contain more than 5 characters.'),
 })
 
 type ContactFormData = z.infer<typeof contactFormSchema>
@@ -36,7 +38,7 @@ export default function ContactForm() {
     setSubmitSuccess(false)
 
     try {
-      const response = await fetch('api/mail', {
+      const response = await fetch('/api/mail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -53,9 +55,12 @@ export default function ContactForm() {
           throw new Error(result.error || 'Falha ao enviar a mensagem')
         }
       } else {
-        throw new Error('Falha na requisição')
+        throw new Error(
+          `Falha na requisição: ${response.status} ${response.statusText}`,
+        )
       }
     } catch (error) {
+      console.error('Erro ao enviar formulário:', error)
       setSubmitError(
         error instanceof Error ? error.message : 'Erro desconhecido',
       )
@@ -93,7 +98,7 @@ export default function ContactForm() {
         )}
       </div>
       <div className="flex flex-col gap-2">
-        <label htmlFor="message">Mensagem</label>
+        <label htmlFor="message">Message</label>
         <textarea
           placeholder="Como posso te ajudar?"
           id="message"
@@ -114,9 +119,7 @@ export default function ContactForm() {
         {isSubmitting ? t('buttonSendingText') : t('buttonText')}
       </Button>
       {submitSuccess && (
-        <span className="mt-2 text-green-500">
-          Mensagem enviada com sucesso!
-        </span>
+        <span className="mt-2 text-green-500">{t('successMessage')}</span>
       )}
       {submitError && (
         <span className="mt-2 text-red-500">Erro: {submitError}</span>

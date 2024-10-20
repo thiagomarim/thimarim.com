@@ -1,7 +1,6 @@
 'use client'
 
-import { Link } from '@/i18n/routing'
-import { usePathname } from 'next/navigation'
+import { Link, usePathname } from '@/i18n/routing'
 import { cn } from '@/lib/utils'
 import { AnimatePresence, motion } from 'framer-motion'
 import { AlignJustify, Command, X } from 'lucide-react'
@@ -131,7 +130,8 @@ export default function Header() {
                 </Link>
               ))}
 
-              <aside className="mt-2 h-[34px]">
+              <aside className="mt-2 flex items-center gap-2">
+                <LanguageToggle />
                 <button
                   className="h-[34px] cursor-pointer rounded-lg border border-border px-2 text-primary hover:bg-terceary hover:transition-colors"
                   type="button"

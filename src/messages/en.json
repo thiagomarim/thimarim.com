@@ -51,7 +51,8 @@
       "title": "Send me an email.",
       "description": "If you liked my portfolio or want to know more about my work, feel free to send me a message. I am always open to new opportunities, partnerships, and ideas. It will be a pleasure to talk to you!",
       "buttonText": "Send email",
-      "buttonSendingText": "Sending..."
+      "buttonSendingText": "Sending...",
+      "successMessage": "The message has been sent successfully!"
     }
   },
   "navItems": {
