@@ -1,5 +1,5 @@
 import TitleSection from '@/components/layout/title-section'
-import { ArrowRight } from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
 import { ProjectsListProps } from '@/data/projects'
 import AnimatedSection from '@/components/common/animated-section'
 import { useTranslations } from 'next-intl'
@@ -20,8 +20,16 @@ export default function ProjectsSection({ projectList }: ProjectsSectionProps) {
         sizes="lg"
         subtitle={t('intro.description')}
       />
+      <div className="flex flex-wrap items-end justify-between sm:flex-nowrap">
+        <TitleSection title={t('featured.title')} sizes="sm" />
+        <Link
+          href={'/projects/all'}
+          className="mt-2 flex max-w-max items-center gap-2 text-[15px] text-primary hover:underline hover:underline-offset-4 sm:mt-0"
+        >
+          {t('featured.seeAll')} <ChevronRight size={16} />
+        </Link>
+      </div>
 
-      <TitleSection title={t('featured.title')} sizes="sm" />
       <div className="flex flex-col gap-6 sm:gap-16">
         {projectList.slice(0, 4).map((project) => (
           <ProjectCard project={project} key={project.id} />
@@ -29,9 +37,9 @@ export default function ProjectsSection({ projectList }: ProjectsSectionProps) {
       </div>
       <Link
         href={'/projects/all'}
-        className="mt-12 flex items-center gap-2 text-[15px] text-primary hover:text-primary/80 hover:transition-colors"
+        className="mt-12 flex max-w-max items-center gap-2 text-[15px] text-primary hover:underline hover:underline-offset-4"
       >
-        Ver todos <ArrowRight size={16} />
+        {t('featured.seeAll')} <ChevronRight size={16} />
       </Link>
     </AnimatedSection>
   )

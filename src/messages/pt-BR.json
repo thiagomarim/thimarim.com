@@ -24,7 +24,8 @@
         "description": "Conheça alguns dos meus melhores projetos desenvolvidos, que refletem meu compromisso com a criação de soluções eficientes e inovadoras. Cada projeto foi construído com atenção aos detalhes, utilizando as mais modernas tecnologias e práticas de desenvolvimento, com o objetivo de entregar a melhor experiência para os usuários."
       },
       "featured": {
-        "title": "Projetos em destaque"
+        "title": "Projetos em destaque",
+        "seeAll": "Ver todos"
       }
     },
     "allProjects": {

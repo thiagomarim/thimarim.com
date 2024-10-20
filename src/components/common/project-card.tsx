@@ -46,7 +46,7 @@ export default async function ProjectCard({ project }: ProjectCardProps) {
             href={project.live}
             target="_blank"
             rel="noreferrer noopener"
-            className="flex items-center gap-2 text-primary hover:text-primary/80 hover:transition-colors"
+            className="flex items-center gap-2 text-[15px] text-primary hover:underline hover:underline-offset-4"
           >
             Visit Project <ArrowUpRight size={16} />
           </a>
@@ -54,7 +54,7 @@ export default async function ProjectCard({ project }: ProjectCardProps) {
             href={project.repo}
             target="_blank"
             rel="noreferrer noopener"
-            className="flex items-center gap-2 text-primary hover:text-primary/80 hover:transition-colors"
+            className="flex items-center gap-2 text-[15px] text-primary hover:underline hover:underline-offset-4"
           >
             View Code <ArrowUpRight size={16} />
           </a>
