@@ -5,6 +5,7 @@ import AnimatedSection from '@/components/common/animated-section'
 import { useTranslations } from 'next-intl'
 import ProjectCard from '@/components/common/project-card'
 import { Link } from '@/i18n/routing'
+import LetsConnect from '@/components/layout/lets-connect'
 
 interface ProjectsSectionProps {
   projectList: ProjectsListProps[]
@@ -17,11 +18,11 @@ export default function ProjectsSection({ projectList }: ProjectsSectionProps) {
     <AnimatedSection>
       <TitleSection
         title={t('intro.title')}
-        sizes="lg"
+        size="lg"
         subtitle={t('intro.description')}
       />
       <div className="flex flex-wrap items-end justify-between sm:flex-nowrap">
-        <TitleSection title={t('featured.title')} sizes="sm" />
+        <TitleSection title={t('featured.title')} size="sm" />
         <Link
           href={'/projects/all'}
           className="mt-2 flex max-w-max items-center gap-2 text-[15px] text-primary hover:underline hover:underline-offset-4 sm:mt-0"
@@ -41,6 +42,7 @@ export default function ProjectsSection({ projectList }: ProjectsSectionProps) {
       >
         {t('featured.seeAll')} <ChevronRight size={16} />
       </Link>
+      <LetsConnect />
     </AnimatedSection>
   )
 }

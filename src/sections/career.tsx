@@ -12,7 +12,7 @@ export default function Career({ careerInfo }: CareerProps) {
 
   return (
     <section>
-      <TitleSection title={t('career.title')} sizes="sm" />
+      <TitleSection title={t('career.title')} size="sm" />
       <div className="mt-5 grid grid-cols-1 gap-10 sm:grid-cols-2">
         {careerInfo.map((career) => (
           <CardCareer career={career} key={career.company} />

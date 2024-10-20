@@ -52,6 +52,12 @@
       "buttonText": "Enviar email",
       "buttonSendingText": "Enviando...",
       "successMessage": "Mensagem enviada com sucesso!"
+    },
+    "letsConnect": {
+      "title": "Entre em contato!",
+      "description": "Se você gostou do meu portfólio ou deseja saber mais sobre o meu trabalho, sinta-se à vontade para me enviar uma mensagem. Você também pode entrar em contato comigo através do meu LinkedIn. Estou sempre aberto a novas oportunidades, parcerias e ideias. Será um prazer conversar com você!",
+      "buttonText": "Enviar email",
+      "linkedinButtonText": "Conecte-se comigo no LinkedIn"
     }
   },
   "navItems": {

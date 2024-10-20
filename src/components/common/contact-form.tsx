@@ -50,7 +50,7 @@ export default function ContactForm() {
         const result = await response.json()
         if (result.success) {
           setSubmitSuccess(true)
-          reset() // Limpa o formulário após envio bem-sucedido
+          reset()
         } else {
           throw new Error(result.error || 'Falha ao enviar a mensagem')
         }

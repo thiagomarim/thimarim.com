@@ -52,6 +52,12 @@
       "buttonText": "Send email",
       "buttonSendingText": "Sending...",
       "successMessage": "The message has been sent successfully!"
+    },
+    "letsConnect": {
+      "title": "Feel free to get in touch with me!",
+      "description": "If you liked my portfolio or want to know more about my work, feel free to send me a message. You can also contact me through my LinkedIn. I am always open to new opportunities, partnerships, and ideas. It will be a pleasure to talk to you!",
+      "buttonText": "Send email",
+      "linkedinButtonText": "Connect with me on LinkedIn"
     }
   },
   "navItems": {

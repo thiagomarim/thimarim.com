@@ -4,6 +4,7 @@ import AnimatedSection from '@/components/common/animated-section'
 import { useTranslations } from 'next-intl'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
+import LetsConnect from '@/components/layout/lets-connect'
 
 interface StackSectionProps {
   stackList: StackListProps[]
@@ -14,11 +15,11 @@ export default function StackSection({ stackList }: StackSectionProps) {
 
   return (
     <AnimatedSection>
-      <TitleSection title={t('title')} sizes="lg" subtitle={t('description')} />
+      <TitleSection title={t('title')} size="lg" subtitle={t('description')} />
 
       {stackList.map(({ items, title }) => (
         <div key={title}>
-          <TitleSection title={t(`categories.${title}`)} sizes="sm" />
+          <TitleSection title={t(`categories.${title}`)} size="sm" />
           <div className="mt-4 grid grid-cols-1 gap-3 mobile:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
             {items.map((item) => (
               <div
@@ -54,6 +55,7 @@ export default function StackSection({ stackList }: StackSectionProps) {
           </div>
         </div>
       ))}
+      <LetsConnect />
     </AnimatedSection>
   )
 }

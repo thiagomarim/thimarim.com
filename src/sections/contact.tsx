@@ -8,7 +8,7 @@ export default function ContactSection() {
 
   return (
     <AnimatedSection>
-      <TitleSection title={t('title')} sizes="lg" subtitle={t('description')} />
+      <TitleSection title={t('title')} size="lg" subtitle={t('description')} />
       <div className="mt-12">
         <ContactForm />
       </div>

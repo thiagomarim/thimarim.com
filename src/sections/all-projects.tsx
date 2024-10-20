@@ -1,5 +1,6 @@
 import AnimatedSection from '@/components/common/animated-section'
 import AllProjectsCard from '@/components/layout/all-project-card'
+import LetsConnect from '@/components/layout/lets-connect'
 import TitleSection from '@/components/layout/title-section'
 import {
   Breadcrumb,
@@ -21,7 +22,7 @@ export default function AllProjectsSection() {
         <div>
           <TitleSection
             title={t('title')}
-            sizes="lg"
+            size="lg"
             subtitle={t('description')}
           />
         </div>
@@ -60,6 +61,7 @@ export default function AllProjectsSection() {
           <AllProjectsCard key={project.name} project={project} />
         ))}
       </div>
+      <LetsConnect />
     </AnimatedSection>
   )
 }

@@ -3,28 +3,45 @@ import { cn } from '@/lib/utils'
 interface TitleSectionProps {
   title: string
   subtitle?: string
-  sizes: 'sm' | 'md' | 'lg'
+  size?: 'sm' | 'md' | 'lg'
+  titleClassName?: string
+  subtitleClassName?: string
+  containerClassName?: string
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+}
+
+const sizeClasses = {
+  sm: 'text-xl sm:text-2xl font-semibold',
+  md: 'text-2xl sm:text-3xl font-semibold',
+  lg: 'text-3xl sm:text-5xl lg:text-6xl font-bold',
 }
 
 export default function TitleSection({
   title,
   subtitle,
-  sizes,
+  size = 'md',
+  titleClassName,
+  subtitleClassName,
+  containerClassName,
+  as: Component = 'h1',
 }: TitleSectionProps) {
   return (
-    <div className="mt-8 flex max-w-[1000px] flex-col gap-6 sm:mt-14">
-      <h1
-        className={cn(
-          '',
-          sizes === 'sm' && 'text-2xl font-semibold',
-          sizes === 'md' && 'text-3xl font-semibold',
-          sizes === 'lg' &&
-            'text-[32px] font-bold leading-[2rem] sm:text-[64px] sm:leading-[72px]',
-        )}
+    <div
+      className={cn(
+        'mt-8 flex max-w-[1000px] flex-col gap-4 sm:mt-14',
+        containerClassName,
+      )}
+    >
+      <Component
+        className={cn(sizeClasses[size], 'leading-tight', titleClassName)}
       >
         {title}
-      </h1>
-      {subtitle && <p className="text-base text-secondary">{subtitle}</p>}
+      </Component>
+      {subtitle && (
+        <p className={cn('text-base text-secondary', subtitleClassName)}>
+          {subtitle}
+        </p>
+      )}
     </div>
   )
 }
