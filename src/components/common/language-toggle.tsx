@@ -20,18 +20,18 @@ export default function LanguageToggle() {
     <DropdownMenu>
       <DropdownMenuTrigger
         asChild
-        className="hover:bg-terceary hover:transition-colors"
+        className="bg-background hover:bg-terceary hover:transition-colors"
       >
         <Button
           variant={'outline'}
           size={'sm'}
-          className="h-[34px] border-border px-2"
+          className="h-[34px] border-border bg-background px-2"
         >
           <Globe size={20} />
           <span className="sr-only">Toggle language</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="end" className="bg-background">
         <DropdownMenuItem>
           <Link href={pathname} locale="en" className="flex items-center gap-2">
             <Image src={euaIcon} alt="Brazil" width={16} height={16} />

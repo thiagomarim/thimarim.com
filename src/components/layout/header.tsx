@@ -123,7 +123,8 @@ export default function Header() {
                   key={page.name}
                   className={cn(
                     'text-sm font-medium uppercase text-secondary hover:text-primary hover:transition-colors',
-                    pathname === page.href && 'text-red-500',
+                    pathname === page.href &&
+                      'text-primary transition-colors after:opacity-100 hover:text-[#f2f2f2]',
                   )}
                 >
                   {page.name}

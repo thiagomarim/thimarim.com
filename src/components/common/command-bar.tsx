@@ -18,7 +18,7 @@ import React, {
 } from 'react'
 import { cn } from '../../lib/utils'
 import Lottie, { LottieRefCurrentProps } from 'lottie-react'
-import { useRouter } from 'next/navigation'
+import { useRouter } from '@/i18n/routing'
 
 import emailIcon from '../../../public/icons/email.json'
 import copyLinkIcon from '../../../public/icons/copy-link.json'
