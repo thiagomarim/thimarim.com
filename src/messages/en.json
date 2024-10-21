@@ -1,0 +1,99 @@
+{
+  "pages": {
+    "home": {
+      "introduction": {
+        "title": "Hi, I'm Thiago / a front-end developer.",
+        "description": "I currently work as a front-end developer at Shakers. I am totally passionate about technology and am always looking to learn new things. I am located in Sao Paulo, Brazil.",
+        "link": "Read more about me"
+      }
+    },
+    "about": {
+      "aboutMe": {
+        "title": "A little more about me.",
+        "firstParagraph": "Hello! I'm Thiago Soares Marim, a 19-year-old front-end developer at Shakers Agência & Consultoria. I'm currently studying Systems Analysis and Development at Universidade Nove de Julho (UNINOVE). I'm truly passionate about bringing ideas to life by creating visually appealing and dynamic websites that prioritize the best user experience.",
+        "secondParagraph": "My work is focused on creating beautiful and intuitive interfaces, ensuring that every detail contributes to fluid and pleasant navigation. I have solid knowledge of several essential technologies for front-end development, such as HTML, CSS, JavaScript, Git, Github, and TypeScript. Additionally, I use tools like Tailwind CSS, React, and Next.js to create modern, high-performance applications.",
+        "thirdParagraph": "Whether through creating a responsive design or implementing functionality that makes a difference, my goal is to always deliver the best to users and clients, combining aesthetics, functionality, and performance in each project."
+      },
+      "career": {
+        "title": "Career"
+      }
+    },
+    "projects": {
+      "intro": {
+        "title": "Here are my most outstanding projects ever created.",
+        "description": "Check out some of my main projects, demonstrating my dedication to creating effective and cutting-edge solutions. Each project has been meticulously developed using the latest technologies and best practices to ensure the best user experience."
+      },
+      "featured": {
+        "title": "Featured projects",
+        "seeAll": "See all"
+      }
+    },
+    "allProjects": {
+      "title": "All projects",
+      "description": "In this section, you will find a selection of the projects I have worked on, ranging from interactive web applications to more complex development solutions. Each project reflects my commitment to creating quality digital experiences and my ability to turn ideas into reality through technologies like HTML, CSS, JavaScript, TypeScript, React, Next.js, and more. Explore each of them to learn more about my development process and the results I can offer.",
+      "breadcrumb": {
+        "home": "Home",
+        "projects": "Projects",
+        "allProjects": "All projects"
+      }
+    },
+    "stack": {
+      "title": "Stack",
+      "description": "This section brings together the main technologies and tools that I use in developing web solutions. I am always looking for new practices and innovations to deliver efficient and scalable applications. Each technology in my stack was chosen to ensure projects have impeccable performance, flexibility, and user experience.",
+      "categories": {
+        "frontend": "Front-end",
+        "design": "Design",
+        "version-control": "Version control"
+      }
+    },
+    "contact": {
+      "title": "Send me an email.",
+      "description": "If you liked my portfolio or want to know more about my work, feel free to send me a message. I am always open to new opportunities, partnerships, and ideas. It will be a pleasure to talk to you!",
+      "buttonText": "Send email",
+      "buttonSendingText": "Sending...",
+      "successMessage": "The message has been sent successfully!"
+    },
+    "letsConnect": {
+      "title": "Feel free to get in touch with me!",
+      "description": "If you liked my portfolio or want to know more about my work, feel free to send me a message. You can also contact me through my LinkedIn. I am always open to new opportunities, partnerships, and ideas. It will be a pleasure to talk to you!",
+      "buttonText": "Send email",
+      "linkedinButtonText": "Connect with me on LinkedIn"
+    }
+  },
+  "navItems": {
+    "about": "About",
+    "projects": "Projects",
+    "stack": "Stack",
+    "contact": "Contact"
+  },
+  "config": {
+    "career": {
+      "shakers": {
+        "role": "Front-end Developer",
+        "location": "Remote",
+        "monthYear": "sep 2024",
+        "endDate": "Current"
+      }
+    },
+    "projects": {
+      "dogs": {
+        "description": "A social network for dogs and friends. The project has login systems, containing “register” and “forgot my password” tabs, in addition, the project also has a profile system, so you can view your posts and see information about them."
+      },
+      "fintech": {
+        "description": "The project is a dashboard that contains various information about your company's sales, including a summary of the total sales made during a selected date, a graph comparing previous sales, and finally a list with information on all payments."
+      },
+      "interior-decor": {
+        "description": "A landing page for a fictitious company aimed at interior designers, containing all the company information, some examples of interiors made, and much more!"
+      },
+      "expert-notes": {
+        "description": "A notes application, in which you can add a note by writing manually or using the browser's voice recording, containing the functionality to add notes, delete, and search. A landing page for a fictitious company aimed at interior designers, containing all the company information, some examples of interiors made, and much more!"
+      },
+      "to-do-list": {
+        "description": "A Task List application where the user can add new tasks and delete them whenever they want."
+      },
+      "todo-list": {
+        "description": "A Task List application where the user can add new tasks, mark them as completed, and delete them whenever they want."
+      }
+    }
+  }
+}
