@@ -13,7 +13,7 @@ interface TitleSectionProps {
 const sizeClasses = {
   sm: 'text-xl sm:text-2xl font-semibold',
   md: 'text-2xl sm:text-3xl font-semibold',
-  lg: 'text-3xl sm:text-5xl lg:text-6xl font-bold',
+  lg: 'text-3xl sm:text-5xl lg:text-6xl font-semibold font-gradient',
 }
 
 export default function TitleSection({

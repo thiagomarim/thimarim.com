@@ -16,8 +16,15 @@
 }
 
 ::selection {
-    background-color: #E6E6E6;
-    color: #08090A;
+    background-color: #00111d;
+}
+
+.font-gradient {
+  background: linear-gradient(to right bottom, #fff 30%, hsla(0, 0%, 100%, .5));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: unset;
 }
 
 #project:nth-child(even) > img {
