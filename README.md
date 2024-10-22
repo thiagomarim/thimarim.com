@@ -1,5 +1,5 @@
 # thimarim.com
-![Website Home Page](https://github.com/user-attachments/assets/18da72a5-c2a7-432d-b488-a403f37c20d5)
+![Website Home Page](https://github.com/user-attachments/assets/f6c61e7c-db5e-4c29-91cc-82411ddfbc91)
 
 > My personal website <3
 
