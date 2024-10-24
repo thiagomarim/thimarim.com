@@ -35,6 +35,56 @@ export default function Header() {
     },
   ]
 
+  const navVariants = {
+    initial: {
+      opacity: 0,
+      y: -20,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        ease: 'easeOut',
+        staggerChildren: 0.1,
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: -50,
+      transition: {
+        duration: 0.3,
+        ease: [0.4, 0, 0.2, 1],
+        staggerChildren: 0.05,
+        staggerDirection: -1,
+        when: 'afterChildren',
+      },
+    },
+  }
+
+  const itemVariants = {
+    initial: {
+      opacity: 0,
+      y: -10,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.3,
+        ease: 'easeOut',
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: -10,
+      transition: {
+        duration: 0.2,
+        ease: 'easeIn',
+      },
+    },
+  }
+
   const { query } = useKBar()
   const pathname = usePathname()
 
@@ -115,37 +165,55 @@ export default function Header() {
             {showMobile ? <X size={20} /> : <AlignJustify size={20} />}
           </button>
 
-          {showMobile && (
-            <nav className="fixed left-0 right-0 top-14 z-50 flex flex-col items-center justify-center gap-4 border-b-[1px] border-border bg-background p-4 text-center">
-              {pages.map((page) => (
-                <Link
-                  href={page.href}
-                  key={page.name}
-                  className={cn(
-                    'text-sm font-medium uppercase text-secondary hover:text-primary hover:transition-colors',
-                    pathname === page.href &&
-                      'text-primary transition-colors after:opacity-100 hover:text-[#f2f2f2]',
-                  )}
-                >
-                  {page.name}
-                </Link>
-              ))}
+          <AnimatePresence>
+            {showMobile && (
+              <motion.nav
+                variants={navVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                className="fixed left-0 right-0 top-14 z-50 flex flex-col items-center justify-center gap-4 border-b-[1px] border-border bg-background p-4 text-center"
+              >
+                {pages.map((page, index) => (
+                  <motion.div
+                    key={page.name}
+                    variants={itemVariants}
+                    custom={index}
+                  >
+                    <Link
+                      href={page.href}
+                      onClick={() => setShowMobile(false)}
+                      className={cn(
+                        'text-sm font-medium uppercase text-secondary hover:text-primary hover:transition-colors',
+                        pathname === page.href &&
+                          'text-primary transition-colors after:opacity-100 hover:text-[#f2f2f2]',
+                      )}
+                    >
+                      {page.name}
+                    </Link>
+                  </motion.div>
+                ))}
 
-              <aside className="mt-2 flex items-center gap-2">
-                <LanguageToggle />
-                <button
-                  className="h-[34px] cursor-pointer rounded-lg border border-border px-2 text-primary hover:bg-terceary hover:transition-colors"
-                  type="button"
-                  aria-label="Command"
-                  onClick={query.toggle}
+                <motion.aside
+                  variants={itemVariants}
+                  custom={pages.length}
+                  className="mt-2 flex items-center gap-2"
                 >
-                  <kbd className="ri-command-line text-2xl tracking-[32px]">
-                    <Command size={20} />
-                  </kbd>
-                </button>
-              </aside>
-            </nav>
-          )}
+                  <LanguageToggle />
+                  <button
+                    className="h-[34px] cursor-pointer rounded-lg border border-border px-2 text-primary hover:bg-terceary hover:transition-colors"
+                    type="button"
+                    aria-label="Command"
+                    onClick={query.toggle}
+                  >
+                    <kbd className="ri-command-line text-2xl tracking-[32px]">
+                      <Command size={20} />
+                    </kbd>
+                  </button>
+                </motion.aside>
+              </motion.nav>
+            )}
+          </AnimatePresence>
 
           <aside className="hidden items-center gap-2 md:flex">
             <LanguageToggle />
