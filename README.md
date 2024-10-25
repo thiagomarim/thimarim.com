@@ -10,6 +10,7 @@
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **Back-end:** [Next.js](https://nextjs.org/)
 - **Front-end:** [React](https://reactjs.org/)
+- **Email:** [Resend](https://resend.com/)
 - **Animation:** [Framer](https://www.framer.com/docs/animation/)
 - **Deployment:** [Vercel](https://vercel.com/)
 
