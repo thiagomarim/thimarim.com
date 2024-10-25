@@ -1,4 +1,4 @@
-import ContactSection from '@/sections/contact'
+import ContactSection from '@/components/pages/contact'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {

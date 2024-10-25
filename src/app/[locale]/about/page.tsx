@@ -1,8 +1,8 @@
-import AnimatedSection from '@/components/common/animated-section'
-import LetsConnect from '@/components/layout/lets-connect'
+import AnimatedSection from '@/components/animated-section'
+import LetsConnect from '@/components/lets-connect'
 import { CareerList } from '@/data/career'
-import AboutMe from '@/sections/about-me'
-import Career from '@/sections/career'
+import AboutMe from '@/components/pages/about/about-me'
+import Career from '@/components/pages/about/career'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {

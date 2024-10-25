@@ -1,5 +1,5 @@
 import { CareerListProps } from '@/data/career'
-import { getRelativeTimeString } from '../../utils/get-relative-time'
+import { getRelativeTimeString } from '../../../utils/get-relative-time'
 import { getTranslations } from 'next-intl/server'
 
 interface CareerCardProps {

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { Mail } from 'lucide-react'
-import { Button } from '../ui/button'
+import { Button } from '../../ui/button'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'

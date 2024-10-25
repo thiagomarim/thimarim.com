@@ -1,8 +1,8 @@
 import { Link } from '@/i18n/routing'
-import { Button } from '../ui/button'
-import TitleSection from './title-section'
+import { Button } from './ui/button'
 import { Linkedin, Mail } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import TitleSection from './title-section'
 
 export default function LetsConnect() {
   const t = useTranslations('pages.letsConnect')

@@ -1,6 +1,6 @@
-import AnimatedSection from '@/components/common/animated-section'
-import ContactForm from '@/components/common/contact-form'
-import TitleSection from '@/components/layout/title-section'
+import AnimatedSection from '@/components/animated-section'
+import ContactForm from '@/components/pages/contact/contact-form'
+import TitleSection from '@/components/title-section'
 import { useTranslations } from 'next-intl'
 
 export default function ContactSection() {

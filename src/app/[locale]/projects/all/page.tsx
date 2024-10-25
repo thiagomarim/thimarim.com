@@ -1,4 +1,4 @@
-import AllProjectsSection from '@/sections/all-projects'
+import AllProjectsSection from '@/components/pages/all-projects'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {

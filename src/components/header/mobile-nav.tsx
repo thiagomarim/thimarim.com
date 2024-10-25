@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { NavItem } from './nav-item'
 import { CommandButton } from './command-bar-button'
-import LanguageToggle from '../common/language-toggle'
+import LanguageToggle from '../language-toggle'
 
 interface MobileNavProps {
   pages: Array<{ name: string; href: string }>

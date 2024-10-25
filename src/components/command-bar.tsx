@@ -16,16 +16,16 @@ import React, {
   ReactNode,
   useRef,
 } from 'react'
-import { cn } from '../../lib/utils'
+import { cn } from '../lib/utils'
 import Lottie, { LottieRefCurrentProps } from 'lottie-react'
 import { useRouter } from '@/i18n/routing'
 
-import emailIcon from '../../../public/icons/email.json'
-import copyLinkIcon from '../../../public/icons/copy-link.json'
-import homeIcon from '../../../public/icons/home.json'
-import aboutIcon from '../../../public/icons/about.json'
-import projectsIcon from '../../../public/icons/projects.json'
-import figIcon from '../../../public/icons/fig.json'
+import emailIcon from '../../public/icons/email.json'
+import copyLinkIcon from '../../public/icons/copy-link.json'
+import homeIcon from '../../public/icons/home.json'
+import aboutIcon from '../../public/icons/about.json'
+import projectsIcon from '../../public/icons/projects.json'
+import figIcon from '../../public/icons/fig.json'
 
 export default function CommandBar({ children }: HTMLAttributes<HTMLElement>) {
   const copyLink = () => {

@@ -1,4 +1,4 @@
-import TitleSection from '@/components/layout/title-section'
+import TitleSection from '@/components/title-section'
 import { useTranslations } from 'next-intl'
 
 export default function AboutMe() {

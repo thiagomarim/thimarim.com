@@ -1,4 +1,4 @@
-import AnimatedSection from '@/components/common/animated-section'
+import AnimatedSection from '@/components/animated-section'
 import { Button } from '@/components/ui/button'
 import { Link } from '@/i18n/routing'
 import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons'

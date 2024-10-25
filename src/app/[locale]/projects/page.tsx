@@ -1,5 +1,5 @@
 import { ProjectsList } from '@/data/projects'
-import ProjectsSection from '@/sections/projects'
+import ProjectsSection from '@/components/pages/projects'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {

@@ -1,7 +1,7 @@
 import { ProjectsListProps } from '@/data/projects'
 import { ArrowUpRight } from 'lucide-react'
 import Image from 'next/image'
-import { Badge } from '../ui/badge'
+import { Badge } from '../../ui/badge'
 import { getTranslations } from 'next-intl/server'
 
 interface ProjectCardProps {

@@ -1,7 +1,7 @@
-import AnimatedSection from '@/components/common/animated-section'
-import AllProjectsCard from '@/components/layout/all-project-card'
-import LetsConnect from '@/components/layout/lets-connect'
-import TitleSection from '@/components/layout/title-section'
+import AnimatedSection from '@/components/animated-section'
+import AllProjectsCard from '@/components/pages/all-projects/all-project-card'
+import LetsConnect from '@/components/lets-connect'
+import TitleSection from '@/components/title-section'
 import {
   Breadcrumb,
   BreadcrumbItem,

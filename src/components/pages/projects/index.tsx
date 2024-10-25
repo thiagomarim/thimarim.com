@@ -1,11 +1,11 @@
-import TitleSection from '@/components/layout/title-section'
+import TitleSection from '@/components/title-section'
 import { ChevronRight } from 'lucide-react'
 import { ProjectsListProps } from '@/data/projects'
-import AnimatedSection from '@/components/common/animated-section'
+import AnimatedSection from '@/components/animated-section'
 import { useTranslations } from 'next-intl'
-import ProjectCard from '@/components/common/project-card'
+import ProjectCard from '@/components/pages/projects/project-card'
 import { Link } from '@/i18n/routing'
-import LetsConnect from '@/components/layout/lets-connect'
+import LetsConnect from '@/components/lets-connect'
 
 interface ProjectsSectionProps {
   projectList: ProjectsListProps[]

@@ -1,5 +1,5 @@
 import { StackList } from '@/data/stack'
-import StackSection from '@/sections/stack'
+import StackSection from '@/components/pages/stack'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {

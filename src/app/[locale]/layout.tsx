@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import '../globals.css'
-import { cn } from '@/lib/utils'
-import CommandBar from '@/components/common/command-bar'
-import Footer from '@/components/layout/footer'
+import CommandBar from '@/components/command-bar'
+import Footer from '@/components/footer'
 import Header from '@/components/header'
 
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
+import { cn } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'Thiago Marim',

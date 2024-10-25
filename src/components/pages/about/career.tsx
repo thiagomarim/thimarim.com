@@ -1,5 +1,5 @@
-import CardCareer from '@/components/layout/career-card'
-import TitleSection from '@/components/layout/title-section'
+import CardCareer from '@/components/pages/about/career-card'
+import TitleSection from '@/components/title-section'
 import { CareerListProps } from '@/data/career'
 import { useTranslations } from 'next-intl'
 

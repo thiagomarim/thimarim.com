@@ -7,11 +7,11 @@ import {
   DropdownMenuItem,
 } from '@/components/ui/dropdown-menu'
 import { Globe } from 'lucide-react'
-import { Button } from '../ui/button'
+import { Button } from './ui/button'
 import { Link, usePathname } from '@/i18n/routing'
 import Image from 'next/image'
-import brazilIcon from '../../../public/flags/brazil-flag-icon.svg'
-import euaIcon from '../../../public/flags/united-states-flag-icon.svg'
+import brazilIcon from '../../public/flags/brazil-flag-icon.svg'
+import euaIcon from '../../public/flags/united-states-flag-icon.svg'
 
 export default function LanguageToggle() {
   const pathname = usePathname()
