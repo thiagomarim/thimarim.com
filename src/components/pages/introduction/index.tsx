@@ -9,8 +9,8 @@ export default function Introduction() {
   const t = useTranslations('pages.home')
 
   return (
-    <AnimatedSection className="flex max-w-[1000px] flex-col justify-center gap-5">
-      <h1 className="text-[32px] font-bold leading-[46px] md:text-[64px] md:leading-[72px]">
+    <AnimatedSection className="flex max-w-[720px] flex-col items-center justify-center gap-6 text-center">
+      <h1 className="text-center text-4xl font-[575] tracking-tight sm:text-6xl">
         {t('introduction.title')}
       </h1>
       <p className="text-base text-secondary">

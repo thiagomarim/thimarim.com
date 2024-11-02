@@ -56,7 +56,7 @@ export default async function RootLayout({
           <NextIntlClientProvider messages={messages}>
             <div className="relative z-0 flex min-h-screen flex-col">
               <Header />
-              <main className="container flex flex-1 overflow-hidden">
+              <main className="container flex flex-1 justify-center overflow-hidden">
                 {children}
               </main>
               <Footer />
